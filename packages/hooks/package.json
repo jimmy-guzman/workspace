@@ -1,0 +1,36 @@
+{
+  "name": "@tachos/hooks",
+  "version": "0.0.0",
+  "description": "tachos react hooks",
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "author": "jimmy-guzman <jimmy.guzman@outlook.com>",
+  "homepage": "https://github.com/jimmy-guzman/tachos#readme",
+  "license": "MIT",
+  "main": "dist/index.ts",
+  "types": "dist/types/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmy-guzman/tachos.git"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "build": "rm -rf dist && bili --config ../../.bilirc.ts --module-name @tachos/hooks",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/jimmy-guzman/tachos/issues"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0"
+  }
+}
