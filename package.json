@@ -1,0 +1,60 @@
+{
+  "name": "tachos",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "private": true,
+  "repository": "https://github.com/jimmy-guzman/tachos.git",
+  "author": "jimmy-guzman <jimmy.guzman@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --cache --cache-location ./.cache/eslint/ --format codeframe 'packages/**/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint 'packages/**/**/*.{js,jsx,ts,tsx}' --fix",
+    "format": "prettier --check 'packages/**/**/*.{js,jsx,ts,tsx,md}'",
+    "format:fix": "prettier --write 'packages/**/**/*.{js,jsx,ts,tsx,md}'",
+    "test": "jest",
+    "test:affected": "lerna run --since HEAD test",
+    "build": "lerna run build",
+    "build:affected": "lerna run --since HEAD build",
+    "commit": "git-cz",
+    "release": "lerna version --conventional-commits"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run --stream precommit",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.1",
+    "@types/react": "^16.9.19",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "bili": "^4.8.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-jest": "^23.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "git-cz": "^4.3.1",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "lerna": "^3.19.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
+    "rollup": "^1.31.1",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "ts-jest": "^25.2.0",
+    "typescript": "^3.7.5"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

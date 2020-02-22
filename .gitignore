@@ -1,0 +1,16 @@
+# node
+node_modules
+
+# logs
+lerna-debug.log
+yarn-error.log
+
+# output
+**/build
+**/dist
+
+# cache
+.cache/
+
+# coverage
+coverage

@@ -1,0 +1,65 @@
+env:
+  browser: true
+  es6: true
+  node: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:prettier/recommended
+  - prettier/@typescript-eslint
+  - plugin:jest/recommended
+  - plugin:jest/style
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 2018
+  sourceType: module
+  warnOnUnsupportedTypeScriptVersion: true
+plugins:
+  - react
+  - react-hooks
+  - '@typescript-eslint'
+  - prettier
+  - jest
+rules:
+  prettier/prettier: error
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: error
+overrides:
+  - files:
+      - '**/*.ts?(x)'
+    rules:
+      default-case: 'off'
+      no-dupe-class-members: 'off'
+      no-undef: 'off'
+      '@typescript-eslint/consistent-type-assertions': 'warn'
+      no-array-constructor: 'off'
+      '@typescript-eslint/no-array-constructor': 'warn'
+      no-use-before-define: 'off'
+      '@typescript-eslint/no-use-before-define':
+        - 'warn'
+        - functions: false
+          classes: false
+          variables: false
+          typedefs: false
+      no-unused-expressions: 'off'
+      '@typescript-eslint/no-unused-expressions':
+        - 'error'
+        - allowShortCircuit: true
+          allowTernary: true
+          allowTaggedTemplates: true
+      no-unused-vars: 'off'
+      '@typescript-eslint/no-unused-vars':
+        - 'warn'
+        - args: 'none'
+          ignoreRestSiblings: true
+      no-useless-constructor: 'off'
+      '@typescript-eslint/no-useless-constructor': 'warn'
+settings:
+  react:
+    version: 'detect'
