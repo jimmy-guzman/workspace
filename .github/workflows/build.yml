@@ -1,4 +1,4 @@
-name: Lerna Pull Request CI
+name: Build
 
 on:
   pull_request:
