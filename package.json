@@ -7,10 +7,9 @@
   "author": "jimmy-guzman <jimmy.guzman@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint --cache --cache-location ./.cache/eslint/ --format codeframe 'packages/**/**/*.{js,jsx,ts,tsx}'",
-    "lint:fix": "eslint 'packages/**/**/*.{js,jsx,ts,tsx}' --fix",
-    "format": "prettier --check 'packages/**/**/*.{js,jsx,ts,tsx,md}'",
-    "format:fix": "prettier --write 'packages/**/**/*.{js,jsx,ts,tsx,md}'",
+    "lint": "eslint --cache --cache-location ./.cache/eslint/ --format codeframe '**/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "yarn --silent lint --fix",
+    "prettify": "prettier '**/**/*.{js,jsx,ts,tsx,md}' --write",
     "test": "jest",
     "affected:test": "lerna run --since origin/develop test",
     "build": "lerna run build",
