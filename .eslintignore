@@ -1,3 +1,9 @@
 # output
 **/build
 **/dist
+
+# cache
+.cache/
+
+# node
+node_modules
