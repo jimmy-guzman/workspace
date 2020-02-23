@@ -4,6 +4,10 @@ on:
   pull_request:
     branches:
       - develop
+  push:
+    branches:
+      - develop
+      - master
 
 jobs:
   build:
@@ -18,12 +22,24 @@ jobs:
         with:
           fetch-depth: 0
       - run: git fetch --prune
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
       - run: yarn install --frozen-lockfile
-      - run: yarn affected:test
-      - run: yarn affected:build
-        env:
-          CI: true
+
+      - run: yarn lint
+
+      - name: 'Build: Pull Requests'
+        if: github.event_name == 'pull_request'
+        run: |
+          yarn affected:test
+          yarn affected:build
+
+      - name: 'Build: Push'
+        if: github.event_name == 'push'
+        run: |
+          yarn test
+          yarn build
