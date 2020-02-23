@@ -15,12 +15,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: git fetch --prune
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install --frozen-lockfile
-      - run: yarn test:affected
-      - run: yarn build:affected
+      - run: yarn affected:test
+      - run: yarn affected:build
         env:
           CI: true

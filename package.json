@@ -12,9 +12,9 @@
     "format": "prettier --check 'packages/**/**/*.{js,jsx,ts,tsx,md}'",
     "format:fix": "prettier --write 'packages/**/**/*.{js,jsx,ts,tsx,md}'",
     "test": "jest",
-    "test:affected": "lerna run --since HEAD test",
+    "affected:test": "lerna run --since origin/develop test",
     "build": "lerna run build",
-    "build:affected": "lerna run --since HEAD build",
+    "affected:build": "lerna run --since origin/develop build",
     "commit": "git-cz",
     "release": "lerna version --conventional-commits"
   },
