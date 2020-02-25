@@ -27,7 +27,8 @@
   "scripts": {
     "precommit": "lint-staged",
     "build": "rm -rf dist && bili --config ../../.bilirc.ts --module-name @tachos/components",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "yarn build"
   },
   "bugs": {
     "url": "https://github.com/jimmy-guzman/tachos/issues"
