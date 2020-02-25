@@ -15,7 +15,8 @@
     "build": "lerna run build",
     "affected:build": "lerna run --since origin/develop build",
     "commit": "git-cz",
-    "release": "lerna version --conventional-commits"
+    "release": "lerna publish --registry http://localhost:4873/",
+    "release:ci": "lerna publish"
   },
   "husky": {
     "hooks": {
