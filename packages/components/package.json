@@ -1,5 +1,5 @@
 {
-  "name": "@tachos/components",
+  "name": "@jimmy-guzman/components",
   "version": "0.0.0",
   "description": "tachos react components",
   "keywords": [
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "build": "rm -rf dist && bili --config ../../.bilirc.ts --module-name @tachos/components",
+    "build": "rm -rf dist && bili --config ../../.bilirc.ts --module-name @jimmy-guzman/components",
     "test": "jest",
     "prepare": "yarn build"
   },

@@ -1,1 +1,1 @@
-console.log('@tachos/components')
+console.log('@jimmy-guzman/components')

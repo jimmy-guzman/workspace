@@ -1,4 +1,4 @@
-# `@tachos/hooks`
+# `@jimmy-guzman/hooks`
 
 > TODO: description
 

@@ -2,6 +2,6 @@ const base = require('../../jest.config.base.js')
 
 module.exports = {
   ...base,
-  name: '@tachos/components',
-  displayName: '@tachos/components'
+  name: '@jimmy-guzman/components',
+  displayName: '@jimmy-guzman/components'
 }

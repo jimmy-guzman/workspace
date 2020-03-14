@@ -1,5 +1,5 @@
 {
-  "name": "tachos",
+  "name": "jimmy-guzman",
   "version": "0.0.0",
   "main": "index.ts",
   "private": true,
@@ -20,7 +20,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run --stream precommit",
+      "pre-commit": "lerna run --concurrency 1 --stream precommit",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
