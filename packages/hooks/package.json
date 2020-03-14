@@ -1,5 +1,5 @@
 {
-  "name": "@tachos/hooks",
+  "name": "@jimmy-guzman/hooks",
   "version": "0.0.0",
   "description": "tachos react hooks",
   "keywords": [
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "build": "rm -rf dist && bili --config ../../.bilirc.ts --module-name @tachos/hooks",
+    "build": "rm -rf dist && bili --config ../../.bilirc.ts --module-name @jimmy-guzman/hooks",
     "test": "jest",
     "prepare": "yarn build"
   },
