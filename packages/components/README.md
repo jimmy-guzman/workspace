@@ -1,4 +1,4 @@
-# `@tachos/components`
+# `@jimmy-guzman/components`
 
 > TODO: description
 
