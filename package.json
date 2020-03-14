@@ -14,7 +14,7 @@
     "affected:test": "lerna run --since origin/develop test",
     "build": "lerna run build",
     "affected:build": "lerna run --since origin/develop build",
-    "commit": "git-cz",
+    "cz": "git-cz",
     "release": "lerna publish --registry http://localhost:4873/",
     "release:ci": "lerna publish"
   },
