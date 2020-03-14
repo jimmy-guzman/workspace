@@ -5,17 +5,14 @@
   "useWorkspaces": true,
   "command": {
     "version": {
-      "allowBranch": "release*"
+      "allowBranch": "release/*"
     },
     "publish": {
       "npmClient": "npm",
       "message": "chore(release): 🤖 publish",
       "conventionalCommits": true,
       "yes": true,
-      "ignoreChanges": [
-        "*.md",
-        "*.test.*"
-      ]
+      "ignoreChanges": ["*.md", "*.test.*"]
     }
   }
 }
