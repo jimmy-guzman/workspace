@@ -1,26 +1,26 @@
 {
   "name": "@jimmy-guzman/hooks",
   "version": "0.0.1",
-  "description": "tachos react hooks",
+  "description": "@jimmy-guzman's react hooks",
   "keywords": [
     "react",
     "hooks"
   ],
   "author": "jimmy-guzman <jimmy.guzman@outlook.com>",
-  "homepage": "https://github.com/jimmy-guzman/tachos#readme",
+  "homepage": "https://github.com/jimmy-guzman/tachos/tree/master/packages/hooks#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.com"
   },
   "license": "MIT",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "dist"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",
