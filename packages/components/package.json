@@ -8,6 +8,10 @@
   ],
   "author": "jimmy-guzman <jimmy.guzman@outlook.com>",
   "homepage": "https://github.com/jimmy-guzman/tachos#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com"
+  },
   "license": "MIT",
   "main": "src/index.ts",
   "directories": {
@@ -17,9 +21,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jimmy-guzman/tachos.git"
