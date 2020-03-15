@@ -17,7 +17,7 @@ jobs:
       - run: yarn lint
       - run: yarn test
 
-  publish-npm:
+  lerna-publish:
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -37,18 +37,28 @@ jobs:
           git checkout "${GITHUB_REF:11}"
           git pull
 
-      - name: Configure NPM
+      - name: Configure NPM Registry
         uses: actions/setup-node@v1
         with:
+          scope: '@jimmy-guzman'
           node-version: 12
           registry-url: https://registry.npmjs.org/
 
-      - name: 'Publish to NPM'
+      - name: Yarn install
+        run: 'yarn install --frozen-lockfile'
+
+      - name: Publish to NPM
         run: |
-          yarn install --frozen-lockfile
           yarn release:npm
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: Configure GPR Registry
+        uses: actions/setup-node@v1
+        with:
+          scope: '@jimmy-guzman'
+          node-version: 12
+          registry-url: 'https://npm.pkg.github.com'
 
       - name: 'Publish to GPR'
         run: 'yarn release:gpr'
