@@ -5,11 +5,12 @@
   "useWorkspaces": true,
   "command": {
     "version": {
-      "allowBranch": "master"
+      "allowBranch": "master",
+      "conventionalCommits": true
     },
     "publish": {
-      "npmClient": "npm",
       "conventionalCommits": true,
+      "npmClient": "npm",
       "yes": true,
       "ignoreChanges": ["*.md", "*.test.*"]
     }
