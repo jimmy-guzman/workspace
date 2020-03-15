@@ -5,7 +5,7 @@ const baseConfig: Config = {
   input: './src/index.ts',
   output: {
     minify: true,
-    format: ['umd', 'esm'],
+    format: ['cjs', 'es'],
     dir: './dist'
   },
   plugins: {
