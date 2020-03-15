@@ -9,7 +9,6 @@
     },
     "publish": {
       "npmClient": "npm",
-      "message": "chore(release): 🤖 publish",
       "conventionalCommits": true,
       "yes": true,
       "ignoreChanges": ["*.md", "*.test.*"]

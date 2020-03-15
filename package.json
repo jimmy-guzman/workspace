@@ -15,8 +15,8 @@
     "build": "lerna run build",
     "affected:build": "lerna run --since origin/develop build",
     "cz": "git-cz",
-    "release": "lerna publish --registry http://localhost:4873/",
-    "release:ci": "lerna publish"
+    "release:npm": "lerna publish --message 'chore(release): 🤖 npm publish'",
+    "release:gpr": "lerna publish --from-package --message 'chore(release): 🤖 gpr publish'"
   },
   "husky": {
     "hooks": {
