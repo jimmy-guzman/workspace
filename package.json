@@ -15,13 +15,12 @@
     "build": "lerna run build",
     "affected:build": "lerna run --since origin/develop build",
     "cz": "git-cz",
-    "release:npm": "lerna publish --message 'chore(release): 🤖 npm publish'",
-    "release:gpr": "lerna publish from-package --message 'chore(release): 🤖 gpr publish'"
+    "release:npm": "cross-env HUSKY_BYPASS=true lerna publish --message 'chore(release): 🤖 npm publish'"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lerna run --concurrency 1 --stream precommit",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "[[ -n $HUSKY_BYPASS ]] || commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "devDependencies": {
@@ -34,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
     "bili": "^4.8.1",
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-jest": "^23.7.0",

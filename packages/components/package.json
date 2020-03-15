@@ -9,8 +9,7 @@
   "author": "jimmy-guzman <jimmy.guzman@outlook.com>",
   "homepage": "https://github.com/jimmy-guzman/tachos/tree/master/packages/components#readme",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.com"
+    "access": "public"
   },
   "license": "MIT",
   "main": "dist/index.js",
