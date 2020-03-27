@@ -22,10 +22,10 @@
     "url": "git+https://github.com/jimmy-guzman/tachos.git"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production --config ../../webpack.config.js",
-    "deploy": "npm run build && firebase deploy",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "deploy": "npm run build && firebase deploy"
   },
   "bugs": {
     "url": "https://github.com/jimmy-guzman/tachos/issues"
