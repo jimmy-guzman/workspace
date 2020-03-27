@@ -1,0 +1,52 @@
+body {
+  font-family: $font-family--primary;
+  color: $color-text-light;
+  font-size: $base__font-size;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text-link--default;
+  fill: $color-text-link--default;
+  &:hover,
+  &.active {
+    color: $color-text-link--active;
+    fill: $color-text-link--active;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+p {
+  letter-spacing: $letter-spacing-default;
+}
+
+.title {
+  text-align: center;
+  @include e(name) {
+    font-weight: $font-weight--regular;
+    color: $color-text-base;
+    letter-spacing: $letter-spacing-more;
+    font-size: $title__font-size / 2;
+    @include mq(medium) {
+      font-size: $title__font-size;
+    }
+  }
+  @include e(caption) {
+    font-weight: $font-weight--regular;
+    letter-spacing: $letter-spacing-more;
+    color: $color-text-caption;
+    font-size: $caption__font-size / 2;
+    @include mq(medium) {
+      font-size: $caption__font-size;
+    }
+  }
+}
