@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "name": "Recipe Box",
+      "repo": "recipebox",
+      "url": "https://recipebox.jimmyguzman.com/",
+      "description": "This Recipe Box was built with React, Redux and Sass. It's a webapp where the user is able to view, create and edit recipes.",
+      "spanish": "Esta Recipe Box fue construida con React, Redux y Sass. Es una aplicación de web en la que el usuario puede ver, crear y editar recetas.",
+      "tech": ["ReactJS", "Redux", "JavaScript", "Sass", "JSX", "Parcel"]
+    },
+
+    {
+      "name": "Markdown Previewer",
+      "repo": "markdownpreviewer",
+      "url": "https://jimmy-guzman.github.io/markdownpreviewer/",
+      "description": "The Markdown Previewer is a webapp that incorporates both React and Sass to render a preview of markdown in real time.",
+      "spanish": "El Markdown Previewer es una aplicación de web que incorpora React y Sass para renderizar Markdown en tiempo real.",
+      "tech": ["ReactJS", "Sass", "marked.js"]
+    },
+    {
+      "name": "Tic Tac Toe Game",
+      "repo": "tictactoegame",
+      "url": "https://jimmy-guzman.github.io/tictactoegame/",
+      "description": "In this Tic Tac Toe Game, the user is able to play tic tac toe versus the computer. The computer ai is based on the minimax algorithm.",
+      "spanish": "En este juego de Tic Tac Toe, el usuario puede jugar tres en raya contra la computadora. El A.I. del la computadora es basado en el algoritmo minimax.",
+      "tech": ["JavaScript", "HTML", "CSS"]
+    },
+    {
+      "repo": "pomodoroclock",
+      "name": "Pomodoro Clock",
+      "url": "https://jimmy-guzman.github.io/pomodoroclock/",
+      "description": "This Pomodoro Clock is a web app that acts as minimalist Pomodoro Technique timer with options for user ease.",
+      "spanish": "Este Pomodoro Clock es una aplicación de web que actúa como un temporizador minimalista de Pomodoro Technique con opciones para la facilidad del usuario.",
+      "tech": ["JavaScript", "HTML", "CSS"]
+    },
+    {
+      "repo": "javascriptcalculator",
+      "name": "Javascript Calculator",
+      "url": "https://jimmy-guzman.github.io/javascriptcalculator/",
+      "description": "The Javascript Calculator is a web app that replicates a basic calculator through Javascript.",
+      "spanish": "La Calculadora de Javascript es una aplicación se web que replica una calculadora básica a través de Javascript.",
+      "tech": ["JavaScript", "HTML", "CSS"]
+    },
+    {
+      "repo": "employeedirectorydashboard",
+      "name": "Employee Directory Dashboard",
+      "url": "https://jimmy-guzman.github.io/employeedirectorydashboard/",
+      "description": "Employee directory dashboard that communicates with a third-party API.",
+      "spanish": "Tablero de directorios de empleados que se comunica con una API de terceros",
+      "tech": ["JavaScript", "jQuery", "HTML", "CSS"]
+    },
+    {
+      "repo": "webappdashboard",
+      "name": "Web App Dashboard",
+      "url": "https://jimmy-guzman.github.io/webappdashboard/",
+      "description": "Web dashboard complete with JavaScript-driven charts and graphs.",
+      "spanish": "Tablero web completo con tablas y gráficos guiados por JavaScript.",
+      "tech": ["JavaScript", "ChartJS", "Sass", "HTML"]
+    },
+    {
+      "repo": "wikipediaviewer",
+      "name": "Wikipedia Viewer",
+      "url": "https://jimmy-guzman.github.io/wikipediaviewer/",
+      "description": "The Wikipedia Viewer pulls results or a random article from Wikipedia's API based on the user's criteria.",
+      "spanish": "El Wikipedia Viewer extrae resultados o un artículo aleatorio de la API de Wikipedia basado en los criterios del usuario.",
+      "tech": ["JavaScript", "HTML", "CSS"]
+    }
+  ]
+}

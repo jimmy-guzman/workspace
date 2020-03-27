@@ -1,0 +1,19 @@
+/* width */
+::-webkit-scrollbar {
+  width: em(12px);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-tertiary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-secondary;
+}

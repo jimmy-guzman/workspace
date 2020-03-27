@@ -1,10 +1,16 @@
+const fs = require('fs')
+
+const packages = fs.readdirSync('./packages/').map(file => file)
+const apps = fs.readdirSync('./apps/').map(file => file)
+const scopes = ['workspace', ...packages, ...apps]
+
 module.exports = {
   disableEmoji: false,
   list: ['test', 'feat', 'fix', 'chore', 'docs', 'refactor', 'style', 'ci', 'perf'],
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
-  scopes: ['workspace', 'hooks', 'components', 'deps'],
+  scopes,
   types: {
     chore: {
       description: 'Build process or auxiliary tool changes',
