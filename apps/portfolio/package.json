@@ -1,0 +1,39 @@
+{
+  "name": "portfolio",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Jimmy Guzman's porfolio",
+  "author": "Jimmy Guzman <jimmy.guzman@outlook.com>",
+  "homepage": "http://jimmyguzman.com",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmy-guzman/tachos.git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production --config ../../webpack.config.js",
+    "deploy": "npm run build && firebase deploy",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/jimmy-guzman/tachos/issues"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "react-router-dom": "^5.1.2",
+    "react-transition-group": "^4.3.0",
+    "webfontloader": "^1.6.28"
+  }
+}

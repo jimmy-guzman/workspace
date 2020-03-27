@@ -1,0 +1,20 @@
+.slide-left {
+  &-enter {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  &-enter.slide-left-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 500ms ease-in;
+  }
+  &-exit {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  &-exit.slide-left-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 300ms ease-in;
+  }
+}
