@@ -1,0 +1,29 @@
+%btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: em(24px);
+  font-family: $font-family--primary;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+%btn__primary {
+  color: $btn--primary--color;
+  fill: $btn--primary--color;
+}
+
+%btn__primary--hover {
+  color: $btn--secondary--color;
+  fill: $color-text-link--active;
+}
+
+%btn__secondary {
+  color: $btn--secondary--color;
+  fill: $btn--secondary--color;
+}
+
+%btn__secondary--hover {
+  color: $btn--secondary--color;
+  fill: $color-text-link--active;
+}
