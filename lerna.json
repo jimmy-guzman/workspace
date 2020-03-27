@@ -6,7 +6,8 @@
   "command": {
     "version": {
       "allowBranch": "master",
-      "conventionalCommits": true
+      "conventionalCommits": true,
+      "ignoreChanges": ["*.md", "*.test.*"]
     },
     "publish": {
       "conventionalCommits": true,
