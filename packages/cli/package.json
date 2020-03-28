@@ -1,0 +1,42 @@
+{
+  "name": "@jimmy-guzman/cli",
+  "version": "0.0.0",
+  "description": "This is a CLI that abstracts away all configuration for my open source projects for linting, testing, building, and more.",
+  "author": "Jimmy Guzman <jimmy.guzman@outlook.com>",
+  "homepage": "https://github.com/jimmy-guzman/tachos#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "bin": {
+    "jg-cli": "src/index.ts"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://maven.ampf.com/artifactory/api/npm/npm-virtual"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmy-guzman/tachos.git"
+  },
+  "scripts": {
+    "start": "ts-node --project ./tsconfig.json src/cli.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/jimmy-guzman/tachos/issues"
+  },
+  "dependencies": {
+    "ts-node": "^8.8.1",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.5",
+    "@types/yargs": "^15.0.4",
+    "@types/which": "^1.3.2",
+    "which": "^2.0.2"
+  }
+}
