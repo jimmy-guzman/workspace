@@ -6,7 +6,12 @@ import GithubSVG from './SVGs/GithubSVG'
 import DemoSVG from './SVGs/DemoSVG'
 import ProgressBar from './ProgressBar'
 
-const Project = ({ project, isEnglish, onProjectImageLoaded, loadingProjectImage }) => {
+const Project = ({
+  project,
+  isEnglish,
+  onProjectImageLoaded,
+  loadingProjectImage
+}) => {
   const imgixUrl = `https://jimmy-guzman.imgix.net/project-screenshots/`
   const imgParams = `png?w=400?fm=png&auto=format`
   const imgUrl = `${imgixUrl + project.repo}.${imgParams}`
@@ -17,7 +22,12 @@ const Project = ({ project, isEnglish, onProjectImageLoaded, loadingProjectImage
         <div className='project__bar'>
           <span>{project.name}</span>
           <div className='project__links'>
-            <a href={project.url} target='_blank' rel='noopener noreferrer' aria-label='View Demo'>
+            <a
+              href={project.url}
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='View Demo'
+            >
               <DemoSVG height='24' width='24' />
             </a>
             <a
@@ -42,7 +52,9 @@ const Project = ({ project, isEnglish, onProjectImageLoaded, loadingProjectImage
         />
         <div className='project__info'>
           <TechList techs={project.tech} />
-          <p className='project__desc'>{isEnglish ? project.description : project.spanish}</p>
+          <p className='project__desc'>
+            {isEnglish ? project.description : project.spanish}
+          </p>
         </div>
       </div>
     </div>
