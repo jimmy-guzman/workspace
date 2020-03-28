@@ -51,7 +51,10 @@ class Projects extends Component {
             isEnglish={isEnglish}
             onProjectImageLoaded={this.onProjectImageLoaded}
           />
-          <ProjectButtons renderNext={this.renderNext} renderPrev={this.renderPrev} />
+          <ProjectButtons
+            renderNext={this.renderNext}
+            renderPrev={this.renderPrev}
+          />
         </section>
       </main>
     )
