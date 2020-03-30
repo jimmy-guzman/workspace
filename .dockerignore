@@ -1,0 +1,4 @@
+**/*
+!apps/portfolio/dist
+!Dockerfile
+!nginx.conf

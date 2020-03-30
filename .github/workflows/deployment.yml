@@ -1,37 +1,16 @@
-name: Build
+name: Deployment
 
 on:
   push:
     branches:
-      - develop
+      - master
+    tags:
+      - '@jimmy-guzman/portfolio*'
 
 jobs:
-  build:
+  deploy-image:
+    name: Build, push, and deploy docker image
     runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - run: git fetch --prune
-
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
-      - run: yarn install --frozen-lockfile
-
-      - run: yarn lint
-
-      - run: yarn test
-
-      - run: yarn build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -42,7 +21,7 @@ jobs:
           node-version: 12
 
       - name: Yarn install
-        run: 'yarn workspace @jimmy-guzman/portfolio --frozen-lockfile'
+        run: 'yarn install --frozen-lockfile'
 
       - name: Build source
         run: 'yarn apps:portfolio:build'
@@ -54,13 +33,13 @@ jobs:
         run: docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD" registry.jimmy.codes
 
       - name: Build container image
-        run: docker build -t registry.jimmy.codes/portfolio:$(echo $GITHUB_SHA | head -c7) .
+        run: docker build -t registry.jimmy.codes/portfolio:$(echo "$(node -p "require('./apps/portfolio/package.json').version")") .
 
       - name: Push image to registry.jimmy.codes
         run: docker push registry.jimmy.codes/portfolio
 
       - name: Update deployment file
-        run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.jimmy.codes/portfolio:'${TAG}'|' $GITHUB_WORKSPACE/kubernetes/dev/portfolio-deployment.yml
+        run: TAG="$(echo "$(node -p "require('./apps/portfolio/package.json').version")")" && sed -i 's|<IMAGE>|registry.jimmy.codes/portfolio:'${TAG}'|' $GITHUB_WORKSPACE/kubernetes/prod/portfolio-deployment.yml
 
       - name: Save DigitalOcean kubeconfig
         uses: digitalocean/action-doctl@master
@@ -70,7 +49,7 @@ jobs:
           args: kubernetes cluster kubeconfig show cluster-tachos > $GITHUB_WORKSPACE/.kubeconfig
 
       - name: Deploy to DigitalOcean Kubernetes
-        run: kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig apply -f $GITHUB_WORKSPACE/kubernetes/dev/
+        run: kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig apply -f $GITHUB_WORKSPACE/kubernetes/prod/
 
       - name: Verify deployment
-        run: kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig rollout status deployment/portfolio-app-dev
+        run: kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig rollout status deployment/portfolio-app
