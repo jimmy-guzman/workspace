@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-app-dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: portfolio-app-dev
+  template:
+    metadata:
+      labels:
+        app: portfolio-app-dev
+    spec:
+      containers:
+        - name: portfolio-dev
+          image: <IMAGE>
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: regcred
