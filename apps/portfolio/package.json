@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "@jimmy-guzman/portfolio",
   "version": "0.0.0",
   "private": true,
-  "description": "Jimmy Guzman's porfolio",
+  "description": "Jimmy Guzman's portfolio",
   "author": "Jimmy Guzman <jimmy.guzman@outlook.com>",
   "homepage": "http://jimmyguzman.com",
   "license": "MIT",
