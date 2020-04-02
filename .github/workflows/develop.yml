@@ -1,4 +1,4 @@
-name: Build
+name: Develop
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +29,8 @@ jobs:
       - run: yarn build
 
   deploy:
-    needs: build
+    name: 'Deploy to dev environment'
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
@@ -42,7 +43,7 @@ jobs:
           node-version: 12
 
       - name: Yarn install
-        run: 'yarn workspace @jimmy-guzman/portfolio --frozen-lockfile'
+        run: 'yarn install --frozen-lockfile'
 
       - name: Build source
         run: 'yarn apps:portfolio:build'
