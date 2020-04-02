@@ -1,4 +1,4 @@
-![Build](https://github.com/jimmy-guzman/tachos/workflows/Build/badge.svg?branch=develop&event=push)
+![Develop](https://github.com/jimmy-guzman/tachos/workflows/Develop/badge.svg?branch=develop&event=push)
 ![Release](https://github.com/jimmy-guzman/tachos/workflows/Release/badge.svg?branch=master&event=push)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
