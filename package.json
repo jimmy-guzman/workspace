@@ -7,8 +7,8 @@
   "author": "jimmy-guzman <jimmy.guzman@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "apps:portfolio:start": "yarn workspace portfolio start",
-    "apps:portfolio:build": "yarn workspace portfolio build",
+    "apps:portfolio:start": "yarn workspace @jimmy-guzman/portfolio start",
+    "apps:portfolio:build": "yarn workspace @jimmy-guzman/portfolio build",
     "lint": "eslint --cache --cache-location ./.cache/eslint/ --format codeframe '**/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "yarn --silent lint --fix",
     "prettify": "prettier '**/**/*.{js,jsx,ts,tsx,md}' --write",
