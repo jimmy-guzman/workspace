@@ -1,6 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const CircularDependencyPlugin = require('circular-dependency-plugin')
 
 module.exports = {
   output: {
@@ -86,6 +87,28 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
+    }),
+    new CircularDependencyPlugin({
+      failOnError: false,
+      allowAsyncCycles: true
     })
-  ]
+  ],
+  stats: {
+    colors: true,
+    assets: true,
+    assetsSort: '!size',
+    builtAt: false,
+    hash: false,
+    version: false,
+    timings: false,
+    entrypoints: false,
+    modules: false,
+    warnings: true,
+    errors: true,
+    chunks: false,
+    chunkGroups: false,
+    children: false,
+    moduleTrace: true,
+    errorDetails: true
+  }
 }
