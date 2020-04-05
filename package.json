@@ -18,7 +18,8 @@
     "build": "lerna run build",
     "affected:build": "lerna run --since origin/develop build",
     "cz": "git-cz",
-    "release:npm": "cross-env HUSKY_BYPASS=true lerna publish --message 'chore(release): 🤖 npm publish'"
+    "release:npm": "cross-env HUSKY_BYPASS=true lerna publish --message 'chore(release): 🤖 npm publish'",
+    "prepare": "lerna run --stream prepare"
   },
   "husky": {
     "hooks": {
