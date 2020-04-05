@@ -3,6 +3,7 @@
   "rootDir": ".",
   "include": ["src/**/*"],
   "compilerOptions": {
+    "declaration": true,
     "declarationDir": "./dist/types"
   }
 }
