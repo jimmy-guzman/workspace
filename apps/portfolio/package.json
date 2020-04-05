@@ -31,6 +31,7 @@
     "url": "https://github.com/jimmy-guzman/tachos/issues"
   },
   "dependencies": {
+    "@jimmy-guzman/hooks": "^0.0.4",
     "normalize.css": "^8.0.1",
     "react-router-dom": "^5.1.2",
     "react-transition-group": "^4.3.0",
