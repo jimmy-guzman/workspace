@@ -1,5 +1,6 @@
 const baseConfig = require('./webpack.base.js')
 const stats = require('./stats')
+const { rules, loaders, plugins } = require('./constants')
 
 baseConfig.mode('development')
 
@@ -12,25 +13,25 @@ baseConfig.devServer
   .stats({ ...stats, assets: false })
 
 baseConfig.module
-  .rule('css')
+  .rule(rules.COMPILE_CSS)
   .test(/\.css$/)
-  .uses.delete('mini-css')
+  .uses.delete(loaders.EXTRACT_CSS_LOADER)
   .end()
-  .use('style')
+  .use(loaders.STYLE_LOADER)
   .loader('style-loader')
-  .before('css')
+  .before(loaders.CSS_LOADER)
   .end()
 
 baseConfig.module
-  .rule('sass')
+  .rule(rules.COMPILE_SASS)
   .test(/\.scss$/)
-  .uses.delete('mini-css')
+  .uses.delete(loaders.EXTRACT_CSS_LOADER)
   .end()
-  .use('style')
+  .use(loaders.STYLE_LOADER)
   .loader('style-loader')
-  .before('css')
+  .before(loaders.CSS_LOADER)
   .end()
 
-baseConfig.plugins.delete('css')
+baseConfig.plugins.delete(plugins.EXTRACT_CSS_PLUGIN)
 
 module.exports = baseConfig.toConfig()
