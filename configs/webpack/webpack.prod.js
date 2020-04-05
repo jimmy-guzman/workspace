@@ -1,22 +1,6 @@
 const baseConfig = require('./webpack.base.js')
+const stats = require('./stats')
 
-baseConfig.mode('production').stats({
-  colors: true,
-  assets: true,
-  assetsSort: '!size',
-  builtAt: false,
-  hash: false,
-  version: false,
-  timings: false,
-  entrypoints: false,
-  modules: false,
-  warnings: true,
-  errors: true,
-  chunks: false,
-  chunkGroups: false,
-  children: false,
-  moduleTrace: true,
-  errorDetails: true
-})
+baseConfig.mode('production').stats({ ...stats })
 
 module.exports = baseConfig.toConfig()
