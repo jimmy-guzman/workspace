@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should render default snapshot 1`] = `
+<div
+  class="title"
+>
+  <h1
+    class="title__name"
+  >
+    Hi, I'm Jimmy
+  </h1>
+  <h2
+    class="title__caption"
+  >
+    I'm a Web Developer
+  </h2>
+</div>
+`;
+
+exports[`<Home /> should render snapshot with not isEnglish 1`] = `
+<div
+  class="title"
+>
+  <h1
+    class="title__name"
+  >
+    Hola, Soy Jimmy
+  </h1>
+  <h2
+    class="title__caption"
+  >
+    Soy un Desarrollador de Web
+  </h2>
+</div>
+`;
