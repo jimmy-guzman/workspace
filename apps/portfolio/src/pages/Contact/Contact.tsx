@@ -1,9 +1,9 @@
 import React from 'react'
 
 import contact from '../../lang/contact.json'
-import GithubSVG from '../SVGs/GithubSVG'
-import LinkedinSVG from '../SVGs/LinkedinSVG'
-import EmailSVG from '../SVGs/EmailSVG'
+import GithubSVG from '../../components/SVGs/GithubSVG'
+import LinkedinSVG from '../../components/SVGs/LinkedinSVG'
+import EmailSVG from '../../components/SVGs/EmailSVG'
 
 export interface ContactProps {
   isEnglish?: boolean
