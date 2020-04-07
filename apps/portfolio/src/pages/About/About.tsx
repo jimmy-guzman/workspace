@@ -1,7 +1,7 @@
 import React from 'react'
 
 import aboutLang from '../../lang/about.json'
-import TechList from '../TechList'
+import TechList from '../../components/TechList'
 
 export interface AboutProps {
   isEnglish?: boolean
