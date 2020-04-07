@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> should render default snapshot 1`] = `
+<nav
+  class="main-nav"
+>
+  <a
+    href="/about"
+  >
+    About
+  </a>
+  <a
+    href="/projects"
+  >
+    Projects
+  </a>
+  <a
+    href="/contact"
+  >
+    Contact
+  </a>
+</nav>
+`;
+
+exports[`<Nav /> should render snapshot with not isEnglish 1`] = `
+<nav
+  class="main-nav"
+>
+  <a
+    href="/about"
+  >
+    Sobre Mi
+  </a>
+  <a
+    href="/projects"
+  >
+    Proyectos
+  </a>
+  <a
+    href="/contact"
+  >
+    Contacto
+  </a>
+</nav>
+`;
