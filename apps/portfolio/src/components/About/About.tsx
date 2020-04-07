@@ -1,26 +1,23 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import about from '../lang/about.json'
 
-import TechList from './TechList'
+import aboutLang from '../../lang/about.json'
+import TechList from '../TechList'
 
-const About = ({ isEnglish }) => (
+export interface AboutProps {
+  isEnglish?: boolean
+}
+
+export const About = ({ isEnglish }: AboutProps) => (
   <main className='light'>
     <section className='about grid__row'>
       <div className='card grid__col--6'>
         <h1>{isEnglish ? 'About Me:' : 'Sobre Mi:'}</h1>
-        <p>{isEnglish ? about.summary : about.summarySpanish}</p>
+        <p>{isEnglish ? aboutLang.summary : aboutLang.summarySpanish}</p>
       </div>
       <div className='card grid__col--6'>
         <h1>{isEnglish ? 'Skills:' : 'Habilidades:'}</h1>
-        <TechList techs={about.skills} />
+        <TechList techs={aboutLang.skills} />
       </div>
     </section>
   </main>
 )
-
-About.propTypes = {
-  isEnglish: PropTypes.bool.isRequired
-}
-
-export default About
