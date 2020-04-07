@@ -1,12 +1,15 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-import contact from '../data/contact.json'
-import GithubSVG from './SVGs/GithubSVG'
-import EmailSVG from './SVGs/EmailSVG'
-import LinkedinSVG from './SVGs/LinkedinSVG'
+import contact from '../../lang/contact.json'
+import GithubSVG from '../SVGs/GithubSVG'
+import LinkedinSVG from '../SVGs/LinkedinSVG'
+import EmailSVG from '../SVGs/EmailSVG'
 
-const Contact = ({ isEnglish }) => (
+export interface ContactProps {
+  isEnglish?: boolean
+}
+
+export const Contact = ({ isEnglish = true }: ContactProps) => (
   <main className='light'>
     <section className='contact grid__row'>
       <div className='card grid__col--6'>
@@ -43,9 +46,3 @@ const Contact = ({ isEnglish }) => (
     </section>
   </main>
 )
-
-Contact.propTypes = {
-  isEnglish: PropTypes.bool.isRequired
-}
-
-export default Contact

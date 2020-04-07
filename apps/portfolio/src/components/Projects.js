@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { projects } from '../data/projects.json'
+import { projects } from '../lang/projects.json'
 import Project from './Project'
 import ProjectButtons from './ProjectButtons'
 
