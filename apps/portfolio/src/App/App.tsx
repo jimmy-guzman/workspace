@@ -5,9 +5,8 @@ import { useDynamicHeight } from '@jimmy-guzman/hooks'
 import Options from '../components/Options'
 import About from '../components/About'
 import Projects from '../components/Projects'
-import Contact from '../components/Contact'
 import { useLanguage } from '../hooks'
-import { Nav, Home } from '../components'
+import { Nav, Home, Contact } from '../components'
 
 export const App = () => {
   const [isEnglish, updateLang] = useLanguage()
