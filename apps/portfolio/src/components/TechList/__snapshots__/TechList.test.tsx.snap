@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TechList /> should render default snapshot 1`] = `
+<ul
+  style="text-align: center;"
+>
+  <li
+    class="badge"
+  >
+    JavaScript
+  </li>
+  <li
+    class="badge"
+  >
+    ReactJS
+  </li>
+  <li
+    class="badge"
+  >
+    Redux
+  </li>
+</ul>
+`;
+
+exports[`<TechList /> should render snapshot with not isEnglish 1`] = `
+<ul
+  style="text-align: center;"
+>
+  <li
+    class="badge"
+  >
+    JavaScript
+  </li>
+  <li
+    class="badge"
+  >
+    ReactJS
+  </li>
+  <li
+    class="badge"
+  >
+    Redux
+  </li>
+</ul>
+`;
