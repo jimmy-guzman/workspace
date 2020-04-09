@@ -1,7 +1,7 @@
 import React from 'react'
 
 import aboutLang from '../../lang/about.json'
-import TechList from '../../components/TechList'
+import { TechList } from '../../components'
 
 export interface AboutProps {
   isEnglish?: boolean
@@ -16,7 +16,7 @@ export const About = ({ isEnglish }: AboutProps) => (
       </div>
       <div className='card grid__col--6'>
         <h1>{isEnglish ? 'Skills:' : 'Habilidades:'}</h1>
-        <TechList techs={aboutLang.skills} />
+        <TechList technologies={aboutLang.skills} />
       </div>
     </section>
   </main>
