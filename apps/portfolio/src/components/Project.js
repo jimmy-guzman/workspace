@@ -1,10 +1,10 @@
 import React from 'react'
 import { bool, shape, string, func } from 'prop-types'
 
-import TechList from './TechList'
 import GithubSVG from './SVGs/GithubSVG'
 import DemoSVG from './SVGs/DemoSVG'
 import ProgressBar from './ProgressBar'
+import { TechList } from './TechList'
 
 const Project = ({
   project,
@@ -51,7 +51,7 @@ const Project = ({
           src={`${imgUrl}`}
         />
         <div className='project__info'>
-          <TechList techs={project.tech} />
+          <TechList technologies={project.tech} />
           <p className='project__desc'>
             {isEnglish ? project.description : project.spanish}
           </p>
