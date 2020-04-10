@@ -2,7 +2,7 @@ const custom = require('../configs/webpack/webpack.dev')
 
 module.exports = {
   stories: ['../**/**/src/**/*.stories.(jsx|tsx)'],
-  addons: ['@storybook/addon-viewport/register'],
+  addons: ['@storybook/addon-viewport/register', '@storybook/addon-docs'],
 
   webpackFinal: config => {
     config.module.rules = config.module.rules.map(rule => {
