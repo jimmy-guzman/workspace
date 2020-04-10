@@ -3,8 +3,8 @@ import { bool, shape, string, func } from 'prop-types'
 
 import GithubSVG from './SVGs/GithubSVG'
 import DemoSVG from './SVGs/DemoSVG'
-import ProgressBar from './ProgressBar'
 import { TechList } from './TechList'
+import { ProgressBar } from './ProgressBar'
 
 const Project = ({
   project,
