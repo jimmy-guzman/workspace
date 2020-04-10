@@ -2,7 +2,7 @@ const fs = require('fs')
 
 const packages = fs.readdirSync('./packages/').map(file => file)
 const apps = fs.readdirSync('./apps/').map(file => file)
-const scopes = ['workspace', ...packages, ...apps]
+const scopes = ['workspace', 'stories', ...packages, ...apps]
 
 module.exports = {
   disableEmoji: false,
@@ -15,7 +15,8 @@ module.exports = {
     'refactor',
     'style',
     'ci',
-    'perf'
+    'perf',
+    'story'
   ],
   maxMessageLength: 64,
   minMessageLength: 3,
@@ -42,7 +43,7 @@ module.exports = {
     },
     docs: {
       description: 'Documentation only changes',
-      emoji: '✏️',
+      emoji: '📚',
       value: 'docs'
     },
     feat: {
@@ -79,6 +80,11 @@ module.exports = {
       description: 'Adding missing tests',
       emoji: '💍',
       value: 'test'
+    },
+    story: {
+      description: 'Adding missing storybook story',
+      emoji: '📓',
+      value: 'story'
     }
   }
 }
