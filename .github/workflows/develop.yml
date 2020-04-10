@@ -67,6 +67,8 @@ jobs:
 
       - run: 'yarn apps:portfolio:build'
 
+      - run: 'yarn stories:build'
+
       - name: Docker Login
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
