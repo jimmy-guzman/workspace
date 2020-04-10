@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start:stories": "start-storybook -p 9001 -c .storybook",
+    "build:stories": "build-storybook -c .storybook -o .storybook/dist/",
     "apps:portfolio:start": "yarn workspace @jimmy-guzman/portfolio start",
     "apps:portfolio:build": "yarn workspace @jimmy-guzman/portfolio build",
     "lint": "eslint --cache --cache-location ./.cache/eslint/ --format codeframe '**/**/*.{js,jsx,ts,tsx}'",
