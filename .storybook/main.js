@@ -7,6 +7,9 @@ module.exports = {
     config.module.rules = config.module.rules.map(rule => {
       if (rule.test.toString() === '/\\.(mjs|jsx?)$/') {
         rule.test = /\.(mjs|jsx|tsx?)$/
+        rule.use.push({
+          loader: require.resolve('react-docgen-typescript-loader')
+        })
       }
 
       return rule
