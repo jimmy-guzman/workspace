@@ -65,9 +65,9 @@ jobs:
 
       - run: 'yarn install --frozen-lockfile'
 
-      - run: 'yarn apps:portfolio:build'
+      - run: 'yarn build:app:portfolio'
 
-      - run: 'yarn stories:build'
+      - run: 'yarn build:stories'
 
       - name: Docker Login
         env:
