@@ -9,8 +9,8 @@
   "scripts": {
     "start:stories": "start-storybook -p 9001 -c .storybook",
     "build:stories": "build-storybook -c .storybook -o .storybook/dist/",
-    "apps:portfolio:start": "yarn workspace @jimmy-guzman/portfolio start",
-    "apps:portfolio:build": "yarn workspace @jimmy-guzman/portfolio build",
+    "start:app:portfolio": "yarn workspace @jimmy-guzman/portfolio start",
+    "build:app:portfolio": "yarn workspace @jimmy-guzman/portfolio build",
     "lint": "eslint --cache --cache-location ./.cache/eslint/ --format codeframe '**/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "yarn --silent lint --fix",
     "prettify": "prettier '**/**/*.{js,jsx,ts,tsx,md}' --write",
