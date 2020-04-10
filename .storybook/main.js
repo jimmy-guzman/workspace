@@ -5,6 +5,7 @@ module.exports = {
   addons: ['@storybook/addon-viewport/register'],
 
   webpackFinal: config => {
+    config.output = { ...config.output, publicPath: '/stories/' }
     config.module.rules = config.module.rules.map(rule => {
       if (rule.test.toString() === '/\\.(mjs|jsx?)$/') {
         rule.test = /\.(mjs|jsx|tsx?)$/
