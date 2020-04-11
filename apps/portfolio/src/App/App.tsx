@@ -2,11 +2,10 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { useDynamicHeight } from '@jimmy-guzman/hooks'
 
-import Options from '../components/Options'
 import Projects from '../components/Projects'
 import { useLanguage } from '../hooks'
 import { Home, Contact, About } from '../pages'
-import { Nav } from '../components'
+import { Nav, Options } from '../components'
 
 export const App = () => {
   const [isEnglish, updateLang] = useLanguage()

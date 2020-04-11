@@ -1,0 +1,60 @@
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@function em($target, $context: 18px) {
+  @return ($target/$context) * 1em;
+}
+
+@mixin button-setup($type) {
+  @extend %btn;
+  @extend %btn__#{$type};
+
+  &:focus {
+    @extend %btn__#{$type};
+  }
+  &:hover {
+    @extend %btn__#{$type}--hover;
+  }
+}
+
+%btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: em(24px);
+  font-family: 'Oswald', Impact, 'Franklin Gothic Bold', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+%btn__primary {
+  color: #d7d5d9;
+  fill: #d7d5d9;
+}
+
+%btn__primary--hover {
+  color: #292b2f;
+  fill: #40af93;
+}
+
+%btn__secondary {
+  color: #292b2f;
+  fill: #292b2f;
+}
+
+%btn__secondary--hover {
+  color: #292b2f;
+  fill: #40af93;
+}
+
+.btn {
+  @include e(primary) {
+    @include button-setup(primary);
+  }
+  @include e(secondary) {
+    @include button-setup(secondary);
+  }
+}
