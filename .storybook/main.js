@@ -5,15 +5,15 @@ module.exports = {
   addons: [
     '@storybook/addon-viewport/register',
     '@storybook/addon-docs',
-    '@storybook/addon-actions/register'
+    '@storybook/addon-actions/register',
   ],
 
-  webpackFinal: config => {
-    config.module.rules = config.module.rules.map(rule => {
+  webpackFinal: (config) => {
+    config.module.rules = config.module.rules.map((rule) => {
       if (rule.test.toString() === '/\\.(mjs|jsx?)$/') {
         rule.test = /\.(mjs|jsx|tsx?)$/
         rule.use.push({
-          loader: require.resolve('react-docgen-typescript-loader')
+          loader: require.resolve('react-docgen-typescript-loader'),
         })
       }
 
@@ -22,7 +22,7 @@ module.exports = {
 
     config.resolve = {
       ...config.resolve,
-      extensions: custom.resolve.extensions
+      extensions: custom.resolve.extensions,
     }
 
     config.module.rules.push({
@@ -31,12 +31,12 @@ module.exports = {
         'style-loader',
         'css-loader',
         {
-          loader: 'postcss-loader'
+          loader: 'postcss-loader',
         },
-        'sass-loader'
-      ]
+        'sass-loader',
+      ],
     })
 
     return config
-  }
+  },
 }

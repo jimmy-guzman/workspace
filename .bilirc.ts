@@ -6,7 +6,7 @@ const baseConfig: Config = {
   output: {
     minify: true,
     format: ['cjs', 'es'],
-    dir: './dist'
+    dir: './dist',
   },
   plugins: {
     'peer-deps-external': true,
@@ -14,9 +14,9 @@ const baseConfig: Config = {
       typescript: require('typescript'),
       cacheRoot: path.join(__dirname, '.cache/rpt2'),
       objectHashIgnoreUnknownHack: false,
-      useTsconfigDeclarationDir: true
-    }
-  }
+      useTsconfigDeclarationDir: true,
+    },
+  },
 }
 
 export default baseConfig
