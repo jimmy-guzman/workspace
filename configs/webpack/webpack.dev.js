@@ -11,9 +11,9 @@ module.exports = merge(baseConfig, {
     overlay: true,
     contentBase: './dist',
     watchOptions: {
-      ignored: /node_modules/
+      ignored: /node_modules/,
     },
     historyApiFallback: true,
-    stats: { ...stats, assets: false }
-  }
+    stats: { ...stats, assets: false },
+  },
 })

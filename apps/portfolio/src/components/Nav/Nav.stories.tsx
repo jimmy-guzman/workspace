@@ -5,7 +5,7 @@ import { withMockRouter } from '../../utils'
 export default {
   title: 'portfolio/components/Nav',
   component: Nav,
-  decorators: [withMockRouter]
+  decorators: [withMockRouter],
 }
 
 export const normal = () => <Nav links={defaultLinks} />

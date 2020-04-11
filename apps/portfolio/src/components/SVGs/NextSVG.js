@@ -14,7 +14,7 @@ const NextSVG = ({ height, width }) => (
 
 NextSVG.propTypes = {
   height: string.isRequired,
-  width: string.isRequired
+  width: string.isRequired,
 }
 
 export default NextSVG

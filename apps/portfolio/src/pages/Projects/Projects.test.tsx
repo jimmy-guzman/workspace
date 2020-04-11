@@ -7,7 +7,7 @@ import { Projects, ProjectsProps } from './Projects'
 const setupProjects = (
   props: ProjectsProps = {
     isEnglish: true,
-    projects: defaultProjects
+    projects: defaultProjects,
   }
 ) => {
   return render(<Projects {...props} />)
@@ -22,7 +22,7 @@ describe('<Projects />', () => {
   it('should render spanish snapshot', () => {
     const { container } = setupProjects({
       isEnglish: false,
-      projects: defaultProjects
+      projects: defaultProjects,
     })
 
     expect(container.firstChild).toMatchSnapshot()

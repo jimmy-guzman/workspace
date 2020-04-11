@@ -3,7 +3,7 @@ import { ProgressBar } from './ProgressBar'
 
 export default {
   title: 'portfolio/components/ProgressBar',
-  component: ProgressBar
+  component: ProgressBar,
 }
 
 export const normal = () => <ProgressBar />

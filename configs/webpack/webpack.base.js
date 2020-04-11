@@ -7,10 +7,10 @@ const include = targetPath()
 
 module.exports = {
   output: {
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
   module: {
     rules: [
@@ -21,8 +21,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'eslint-loader',
         options: {
-          cache: cachePath('eslint')
-        }
+          cache: cachePath('eslint'),
+        },
       },
       {
         test: /\.(js|jsx|ts|tsx)$/,
@@ -32,14 +32,14 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              cacheDirectory: cachePath('babel')
-            }
-          }
-        ]
+              cacheDirectory: cachePath('babel'),
+            },
+          },
+        ],
       },
       {
         test: /\.html$/,
-        use: [{ loader: 'html-loader', options: { minimize: true } }]
+        use: [{ loader: 'html-loader', options: { minimize: true } }],
       },
       {
         test: /\.(png|jpe?g)/i,
@@ -49,13 +49,13 @@ module.exports = {
             loader: 'url-loader',
             options: {
               name: './img/[name].[ext]',
-              limit: 10000
-            }
+              limit: 10000,
+            },
           },
           {
-            loader: 'img-loader'
-          }
-        ]
+            loader: 'img-loader',
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -65,10 +65,10 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              config: { path: postCssConfigPath() }
-            }
-          }
-        ]
+              config: { path: postCssConfigPath() },
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
@@ -79,23 +79,23 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              config: { path: postCssConfigPath() }
-            }
+              config: { path: postCssConfigPath() },
+            },
           },
-          'sass-loader'
-        ]
-      }
-    ]
+          'sass-loader',
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: 'src/index.html',
       filename: './index.html',
-      favicon: 'src/img/favicon.ico'
+      favicon: 'src/img/favicon.ico',
     }),
     new CircularDependencyPlugin({
       failOnError: false,
-      allowAsyncCycles: true
-    })
-  ]
+      allowAsyncCycles: true,
+    }),
+  ],
 }

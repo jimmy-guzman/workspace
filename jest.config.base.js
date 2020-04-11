@@ -6,13 +6,13 @@ module.exports = {
       branches: 87,
       functions: 92,
       lines: 93,
-      statements: 93
-    }
+      statements: 93,
+    },
   },
   coverageReporters: ['html', 'text'],
 
   verbose: true,
   moduleNameMapper: {
-    '^.+\\.(css|scss)$': 'identity-obj-proxy'
-  }
+    '^.+\\.(css|scss)$': 'identity-obj-proxy',
+  },
 }

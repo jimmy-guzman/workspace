@@ -10,20 +10,20 @@ export interface ProjectsProps {
 
 export const Projects = ({
   isEnglish,
-  projects = defaultProjects
+  projects = defaultProjects,
 }: ProjectsProps) => {
   const [projectIndex, setProjectIndex] = useState<number>(0)
   const [loadingProjectImage, setLoadingProjectImage] = useState<boolean>(true)
 
   const renderNext = () => {
-    setProjectIndex(prevState => {
+    setProjectIndex((prevState) => {
       return prevState === projects.length - 1 ? 0 : (prevState += 1)
     })
     setLoadingProjectImage(true)
   }
 
   const renderPrev = () => {
-    setProjectIndex(prevState => {
+    setProjectIndex((prevState) => {
       if (prevState === projects.length - 1) {
         return 0
       }
