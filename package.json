@@ -55,7 +55,7 @@
     "@types/webfontloader": "1.6.29",
     "@typescript-eslint/eslint-plugin": "2.20.0",
     "@typescript-eslint/parser": "2.20.0",
-    "autoprefixer": "9.7.5",
+    "autoprefixer": "9.7.6",
     "babel-jest": "25.2.6",
     "babel-loader": "8.1.0",
     "bili": "4.8.1",
