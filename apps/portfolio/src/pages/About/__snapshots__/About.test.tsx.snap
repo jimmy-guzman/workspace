@@ -24,7 +24,8 @@ exports[`<About /> should render default snapshot 1`] = `
         Habilidades:
       </h1>
       <ul
-        style="text-align: center;"
+        class="TechList"
+        style="text-align: center; list-style: none; padding: 0px;"
       >
         <li
           class="badge"
@@ -151,7 +152,8 @@ exports[`<About /> should render snapshot with not isEnglish 1`] = `
         Habilidades:
       </h1>
       <ul
-        style="text-align: center;"
+        class="TechList"
+        style="text-align: center; list-style: none; padding: 0px;"
       >
         <li
           class="badge"
