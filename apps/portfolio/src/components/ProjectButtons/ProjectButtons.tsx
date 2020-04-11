@@ -1,7 +1,6 @@
 import React from 'react'
 
-import PrevSVG from '../SVGs/PrevSVG'
-import NextSVG from '../SVGs/NextSVG'
+import { PrevIcon, NextIcon } from '../../SVGs'
 
 export interface ProjectButtonsProps {
   renderPrev: () => void
@@ -19,7 +18,7 @@ export const ProjectButtons = ({
       onClick={renderPrev}
       aria-label='Previous'
     >
-      <PrevSVG height='48' width='48' />
+      <PrevIcon height='48' width='48' />
     </button>
     <button
       type='button'
@@ -27,7 +26,7 @@ export const ProjectButtons = ({
       onClick={renderNext}
       aria-label='Next'
     >
-      <NextSVG height='48' width='48' />
+      <NextIcon height='48' width='48' />
     </button>
   </div>
 )

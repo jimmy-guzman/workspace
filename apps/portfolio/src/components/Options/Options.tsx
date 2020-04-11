@@ -1,8 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import './Options.scss'
 import { Button } from './Button'
+
+import './Options.scss'
 
 export interface OptionsProps {
   isEnglish?: boolean

@@ -1,7 +1,6 @@
 import React from 'react'
 
-import DemoSVG from '../SVGs/DemoSVG'
-import GithubSVG from '../SVGs/GithubSVG'
+import { DemoIcon, GithubIcon } from '../../SVGs'
 import { ProgressBar } from '../ProgressBar'
 import { TechList } from '../TechList'
 
@@ -43,7 +42,7 @@ export const Project = ({
               rel='noopener noreferrer'
               aria-label='View Demo'
             >
-              <DemoSVG height='24' width='24' />
+              <DemoIcon height='24' width='24' />
             </a>
             <a
               href={`https://github.com/jimmy-guzman/${project.repo}`}
@@ -51,7 +50,7 @@ export const Project = ({
               rel='noopener noreferrer'
               aria-label='View Repo'
             >
-              <GithubSVG height='24' width='24' />
+              <GithubIcon height='24' width='24' />
             </a>
           </div>
         </div>
