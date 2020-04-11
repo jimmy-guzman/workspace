@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @jimmy-guzman/hooks
 
-
-
-
-
 ## 0.0.5 (2020-04-11)
 
 **Note:** Version bump only for package @jimmy-guzman/hooks
