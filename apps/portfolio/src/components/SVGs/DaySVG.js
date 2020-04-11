@@ -14,7 +14,7 @@ const DaySVG = ({ height, width }) => (
 
 DaySVG.propTypes = {
   height: string.isRequired,
-  width: string.isRequired
+  width: string.isRequired,
 }
 
 export default DaySVG

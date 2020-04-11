@@ -14,7 +14,7 @@ const DemoSVG = ({ height, width }) => (
 
 DemoSVG.propTypes = {
   height: string.isRequired,
-  width: string.isRequired
+  width: string.isRequired,
 }
 
 export default DemoSVG

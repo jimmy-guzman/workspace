@@ -14,8 +14,8 @@ const defaulProps = {
     repo: 'repo',
     description: 'description',
     spanish: 'spanish',
-    tech: ['react', 'typescript', 'webpack']
-  }
+    tech: ['react', 'typescript', 'webpack'],
+  },
 }
 
 const setupProject = (props: ProjectProps = defaulProps) => {
@@ -38,7 +38,7 @@ describe('<Project />', () => {
   it('should contain image with no visiblity when image is not loaded', () => {
     const { getByAltText } = setupProject({
       ...defaulProps,
-      loadingProjectImage: true
+      loadingProjectImage: true,
     })
 
     expect(getByAltText('name')).toHaveStyle('visibility: hidden')

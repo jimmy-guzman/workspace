@@ -14,7 +14,7 @@ const EmailSVG = ({ height, width }) => (
 
 EmailSVG.propTypes = {
   height: string.isRequired,
-  width: string.isRequired
+  width: string.isRequired,
 }
 
 export default EmailSVG

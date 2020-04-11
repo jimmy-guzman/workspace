@@ -11,12 +11,12 @@ module.exports = merge.smart(baseConfig, {
   stats,
   output: {
     filename: 'js/[name].[chunkhash:6].js',
-    chunkFilename: 'js/[name].[chunkhash:6].js'
+    chunkFilename: 'js/[name].[chunkhash:6].js',
   },
   optimization: {
     splitChunks: { chunks: 'all' },
     runtimeChunk: { name: 'manifest' },
-    minimizer: [new TerserPlugin({ cache: cachePath('terser') })]
+    minimizer: [new TerserPlugin({ cache: cachePath('terser') })],
   },
   module: {
     rules: [
@@ -28,10 +28,10 @@ module.exports = merge.smart(baseConfig, {
           {
             loader: 'postcss-loader',
             options: {
-              config: { path: postCssConfigPath() }
-            }
-          }
-        ]
+              config: { path: postCssConfigPath() },
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
@@ -41,17 +41,17 @@ module.exports = merge.smart(baseConfig, {
           {
             loader: 'postcss-loader',
             options: {
-              config: { path: postCssConfigPath() }
-            }
+              config: { path: postCssConfigPath() },
+            },
           },
-          'sass-loader'
-        ]
-      }
-    ]
+          'sass-loader',
+        ],
+      },
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:6].css'
-    })
-  ]
+      filename: 'css/[name].[contenthash:6].css',
+    }),
+  ],
 })

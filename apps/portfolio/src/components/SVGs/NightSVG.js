@@ -14,7 +14,7 @@ const NightSVG = ({ height, width }) => (
 
 NightSVG.propTypes = {
   height: string.isRequired,
-  width: string.isRequired
+  width: string.isRequired,
 }
 
 export default NightSVG

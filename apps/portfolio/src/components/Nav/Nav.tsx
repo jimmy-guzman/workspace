@@ -15,7 +15,7 @@ export interface NavProps {
 export const defaultLinks: Links[] = [
   { link: '/about', name: 'About', spanish: 'Sobre Mi' },
   { link: '/projects', name: 'Projects', spanish: 'Proyectos' },
-  { link: '/contact', name: 'Contact', spanish: 'Contacto' }
+  { link: '/contact', name: 'Contact', spanish: 'Contacto' },
 ]
 
 export const Nav = ({ isEnglish = true, links = defaultLinks }: NavProps) => (

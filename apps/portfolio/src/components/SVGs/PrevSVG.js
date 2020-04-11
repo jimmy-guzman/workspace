@@ -14,7 +14,7 @@ const PrevSVG = ({ height, width }) => (
 
 PrevSVG.propTypes = {
   height: string.isRequired,
-  width: string.isRequired
+  width: string.isRequired,
 }
 
 export default PrevSVG
