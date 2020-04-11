@@ -1,9 +1,17 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 import PrevSVG from '../SVGs/PrevSVG'
 import NextSVG from '../SVGs/NextSVG'
 
-export const ProjectButtons = ({ renderNext, renderPrev }) => (
+export interface ProjectButtonsProps {
+  renderPrev: () => void
+  renderNext: () => void
+}
+
+export const ProjectButtons = ({
+  renderNext,
+  renderPrev
+}: ProjectButtonsProps) => (
   <div className='projects__buttons'>
     <button
       type='button'
@@ -23,8 +31,3 @@ export const ProjectButtons = ({ renderNext, renderPrev }) => (
     </button>
   </div>
 )
-
-ProjectButtons.propTypes = {
-  renderPrev: PropTypes.func.isRequired,
-  renderNext: PropTypes.func.isRequired
-}
