@@ -7,33 +7,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @jimmy-guzman/components
 
-
-
-
-
 ## 0.0.4 (2020-03-15)
 
 **Note:** Version bump only for package @jimmy-guzman/components
-
-
-
-
 
 ## 0.0.3 (2020-03-15)
 
 **Note:** Version bump only for package @jimmy-guzman/components
 
-
-
-
-
 ## 0.0.2 (2020-03-15)
 
 **Note:** Version bump only for package @jimmy-guzman/components
-
-
-
-
 
 ## 0.0.1 (2020-03-15)
 
