@@ -4,5 +4,6 @@ module.exports = {
   ...base,
   preset: undefined,
   name: '@jimmy-guzman/portfolio',
-  displayName: '@jimmy-guzman/portfolio'
+  displayName: '@jimmy-guzman/portfolio',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js']
 }
