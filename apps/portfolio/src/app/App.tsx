@@ -2,9 +2,8 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { useDynamicHeight } from '@jimmy-guzman/hooks'
 
-import Projects from '../components/Projects'
 import { useLanguage } from '../hooks'
-import { Home, Contact, About } from '../pages'
+import { Home, Contact, About, Projects } from '../pages'
 import { Nav, Options } from '../components'
 
 export const App = () => {

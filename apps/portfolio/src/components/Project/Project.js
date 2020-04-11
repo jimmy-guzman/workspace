@@ -1,12 +1,12 @@
 import React from 'react'
 import { bool, shape, string, func } from 'prop-types'
 
-import GithubSVG from './SVGs/GithubSVG'
-import DemoSVG from './SVGs/DemoSVG'
-import { TechList } from './TechList'
-import { ProgressBar } from './ProgressBar'
+import DemoSVG from '../SVGs/DemoSVG'
+import GithubSVG from '../SVGs/GithubSVG'
+import { ProgressBar } from '../ProgressBar'
+import { TechList } from '../TechList'
 
-const Project = ({
+export const Project = ({
   project,
   isEnglish,
   onProjectImageLoaded,
@@ -73,5 +73,3 @@ Project.propTypes = {
     spanish: string
   }).isRequired
 }
-
-export default Project
