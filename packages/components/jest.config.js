@@ -1,7 +1,9 @@
+const { name } = require('./package')
 const base = require('../../jest.config.base.js')
 
 module.exports = {
   ...base,
-  name: '@jimmy-guzman/components',
-  displayName: '@jimmy-guzman/components'
+  roots: ['<rootDir>/src'],
+  name,
+  displayName: name
 }
