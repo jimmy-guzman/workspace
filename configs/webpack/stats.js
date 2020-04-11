@@ -14,5 +14,5 @@ module.exports = {
   chunkGroups: false,
   children: false,
   moduleTrace: true,
-  errorDetails: true
+  errorDetails: true,
 }

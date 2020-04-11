@@ -14,7 +14,7 @@ const LinkedinSVG = ({ height, width }) => (
 
 LinkedinSVG.propTypes = {
   height: string.isRequired,
-  width: string.isRequired
+  width: string.isRequired,
 }
 
 export default LinkedinSVG

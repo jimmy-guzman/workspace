@@ -25,7 +25,7 @@ export const Project = ({
   project,
   isEnglish,
   onProjectImageLoaded,
-  loadingProjectImage
+  loadingProjectImage,
 }: ProjectProps) => {
   const imgixUrl = `https://jimmy-guzman.imgix.net/project-screenshots/`
   const imgParams = `png?w=400?fm=png&auto=format`

@@ -9,8 +9,8 @@ export default {
   component: Options,
   decorators: [
     (storyFn: () => React.ReactNode) =>
-      withMockRouter(storyFn(), window.location.pathname)
-  ]
+      withMockRouter(storyFn(), window.location.pathname),
+  ],
 }
 
 export const english = () => (

@@ -9,8 +9,8 @@ import { App } from './App'
 
 WebFont.load({
   google: {
-    families: ['Oswald:400,700']
-  }
+    families: ['Oswald:400,700'],
+  },
 })
 
 render(

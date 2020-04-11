@@ -11,7 +11,7 @@ export const TechList = ({ technologies }: TechListProps) => (
     className='TechList'
     style={{ textAlign: 'center', listStyle: 'none', padding: 0 }}
   >
-    {technologies.map(technology => (
+    {technologies.map((technology) => (
       <li className='badge' key={technology}>
         {technology}
       </li>

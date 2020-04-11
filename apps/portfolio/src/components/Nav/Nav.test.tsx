@@ -16,7 +16,7 @@ describe('<Nav />', () => {
   })
   it('should render snapshot with not isEnglish', () => {
     const { container } = setupNav({
-      isEnglish: false
+      isEnglish: false,
     })
 
     expect(container.firstChild).toMatchSnapshot()
