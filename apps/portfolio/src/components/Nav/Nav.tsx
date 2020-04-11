@@ -10,7 +10,7 @@ export interface Links {
 }
 export interface NavProps {
   isEnglish?: boolean
-  links: Links[]
+  links?: Links[]
 }
 export const defaultLinks: Links[] = [
   { link: '/about', name: 'About', spanish: 'Sobre Mi' },
