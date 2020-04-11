@@ -1,17 +1,32 @@
 import React from 'react'
-import { bool, shape, string, func } from 'prop-types'
 
 import DemoSVG from '../SVGs/DemoSVG'
 import GithubSVG from '../SVGs/GithubSVG'
 import { ProgressBar } from '../ProgressBar'
 import { TechList } from '../TechList'
 
+export interface Project {
+  name: string
+  url: string
+  repo: string
+  description: string
+  spanish: string
+  tech: string[]
+}
+
+export interface ProjectProps {
+  loadingProjectImage: boolean
+  onProjectImageLoaded: () => void
+  isEnglish: boolean
+  project: Project
+}
+
 export const Project = ({
   project,
   isEnglish,
   onProjectImageLoaded,
   loadingProjectImage
-}) => {
+}: ProjectProps) => {
   const imgixUrl = `https://jimmy-guzman.imgix.net/project-screenshots/`
   const imgParams = `png?w=400?fm=png&auto=format`
   const imgUrl = `${imgixUrl + project.repo}.${imgParams}`
@@ -59,17 +74,4 @@ export const Project = ({
       </div>
     </div>
   )
-}
-
-Project.propTypes = {
-  loadingProjectImage: bool.isRequired,
-  onProjectImageLoaded: func.isRequired,
-  isEnglish: bool.isRequired,
-  project: shape({
-    name: string,
-    url: string,
-    repo: string,
-    description: string,
-    spanish: string
-  }).isRequired
 }
