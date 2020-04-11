@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Options /> should render default snapshot 1`] = `
+<div
+  class="options"
+>
+  <a
+    aria-current="page"
+    class="home-link active-home"
+    href="/"
+  >
+    Jimmy Guzman
+  </a>
+  <div
+    class="options__lang"
+  >
+    <button
+      class="btn__primary active"
+      type="button"
+    >
+      SP
+    </button>
+    <button
+      class="btn__primary"
+      type="button"
+    >
+      ENG
+    </button>
+  </div>
+</div>
+`;
