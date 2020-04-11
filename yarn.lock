@@ -16373,10 +16373,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.7.5:
-  version "3.7.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.5.tgz#0692e21f65fd4108b9330238aac11dd2e177a1ae"
-  integrity sha512-/P5lkRXkWHNAbcJIiHPfRoKqyd7bsyCma1hZNUGfn20qm64T6ZBlrzprymeu918H+mB/0rIg2gGK/BXkhhYgBw==
+typescript@3.8.3:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
+  integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
 
 uglify-js@^2.6.1:
   version "2.8.29"
@@ -17375,7 +17375,7 @@ yaml@^1.7.2:
   dependencies:
     "@babel/runtime" "^7.6.3"
 
-yargs-parser@18.x:
+yargs-parser@18.x, yargs-parser@^18.1.1:
   version "18.1.2"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-18.1.2.tgz#2f482bea2136dbde0861683abea7756d30b504f1"
   integrity sha512-hlIPNR3IzC1YuL1c2UwwDKpXlNFBqD1Fswwh1khz5+d8Cq/8yc/Mn0i+rQXduu8hcrFKvO7Eryk+09NecTQAAQ==
@@ -17410,14 +17410,6 @@ yargs-parser@^15.0.0:
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-15.0.0.tgz#cdd7a97490ec836195f59f3f4dbe5ea9e8f75f08"
   integrity sha512-xLTUnCMc4JhxrPEPUYD5IBR1mWCK/aT6+RJ/K29JY2y1vD+FhtgKK0AXRWvI262q3QSffAQuTouFIKUuHX89wQ==
-  dependencies:
-    camelcase "^5.0.0"
-    decamelize "^1.2.0"
-
-yargs-parser@^18.1.1:
-  version "18.1.2"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-18.1.2.tgz#2f482bea2136dbde0861683abea7756d30b504f1"
-  integrity sha512-hlIPNR3IzC1YuL1c2UwwDKpXlNFBqD1Fswwh1khz5+d8Cq/8yc/Mn0i+rQXduu8hcrFKvO7Eryk+09NecTQAAQ==
   dependencies:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
