@@ -1,0 +1,16 @@
+@function em($target, $context: 18px) {
+  @return ($target/$context) * 1em;
+}
+
+.TechList {
+  font-family: 'Oswald', Impact, 'Franklin Gothic Bold', sans-serif;
+}
+
+.badge {
+  display: inline-block;
+  background: #d7d5d9;
+  border-radius: em(3px);
+  color: #292b2f;
+  padding: em(5px);
+  margin: em(6px);
+}
