@@ -7,7 +7,7 @@ import { TechList, TechListProps } from './TechList'
 
 const setupTechList = (
   props: TechListProps = {
-    technologies: ['JavaScript', 'ReactJS', 'Redux']
+    technologies: ['JavaScript', 'ReactJS', 'Redux'],
   }
 ) => {
   const history = createMemoryHistory()

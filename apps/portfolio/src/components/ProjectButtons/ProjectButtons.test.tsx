@@ -6,7 +6,7 @@ import { ProjectButtons, ProjectButtonsProps } from './ProjectButtons'
 const setupProjectButtons = (
   props: ProjectButtonsProps = {
     renderPrev: jest.fn(),
-    renderNext: jest.fn()
+    renderNext: jest.fn(),
   }
 ) => {
   return render(<ProjectButtons {...props} />)

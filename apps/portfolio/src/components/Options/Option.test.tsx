@@ -31,14 +31,14 @@ describe('<Options />', () => {
   })
   it('should set correct class when spanish', () => {
     const { getByText } = setupOptions({
-      isEnglish: false
+      isEnglish: false,
     })
 
     expect(getByText('SP')).toHaveClass('active')
   })
   it('should set correct class when english', () => {
     const { getByText } = setupOptions({
-      isEnglish: true
+      isEnglish: true,
     })
 
     expect(getByText('ENG')).toHaveClass('active')

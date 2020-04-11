@@ -3,7 +3,7 @@ import { TechList } from './TechList'
 
 export default {
   title: 'portfolio/components/TechList',
-  component: TechList
+  component: TechList,
 }
 
 export const normal = () => (

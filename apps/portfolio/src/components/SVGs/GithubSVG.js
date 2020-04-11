@@ -14,7 +14,7 @@ const GithubSVG = ({ height, width }) => (
 
 GithubSVG.propTypes = {
   height: string.isRequired,
-  width: string.isRequired
+  width: string.isRequired,
 }
 
 export default GithubSVG

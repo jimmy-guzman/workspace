@@ -13,7 +13,7 @@ export interface OptionsProps {
 export const Options = ({
   isEnglish,
   updateLang,
-  activeRoute = '/'
+  activeRoute = '/',
 }: OptionsProps) => (
   <div className='options'>
     <NavLink

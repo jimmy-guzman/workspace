@@ -10,7 +10,7 @@ export interface ProjectButtonsProps {
 
 export const ProjectButtons = ({
   renderNext,
-  renderPrev
+  renderPrev,
 }: ProjectButtonsProps) => (
   <div className='projects__buttons'>
     <button
