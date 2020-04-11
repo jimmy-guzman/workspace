@@ -1,9 +1,7 @@
 import React from 'react'
 
 import contact from '../../lang/contact.json'
-import GithubSVG from '../../components/SVGs/GithubSVG'
-import LinkedinSVG from '../../components/SVGs/LinkedinSVG'
-import EmailSVG from '../../components/SVGs/EmailSVG'
+import { GithubIcon, LinkedinIcon, EmailIcon } from '../../SVGs'
 
 export interface ContactProps {
   isEnglish?: boolean
@@ -17,7 +15,7 @@ export const Contact = ({ isEnglish = true }: ContactProps) => (
         <ul>
           <li>
             <a href='mailto:hello@jimmyguzman.com'>
-              <EmailSVG width='50' height='50' />
+              <EmailIcon width='50' height='50' />
             </a>
           </li>
           <li>
@@ -26,7 +24,7 @@ export const Contact = ({ isEnglish = true }: ContactProps) => (
               target='_blank'
               rel='noopener noreferrer'
             >
-              <LinkedinSVG width='50' height='50' />
+              <LinkedinIcon width='50' height='50' />
             </a>
           </li>
           <li>
@@ -35,7 +33,7 @@ export const Contact = ({ isEnglish = true }: ContactProps) => (
               target='_blank'
               rel='noopener noreferrer'
             >
-              <GithubSVG width='50' height='50' />
+              <GithubIcon width='50' height='50' />
             </a>
           </li>
         </ul>
