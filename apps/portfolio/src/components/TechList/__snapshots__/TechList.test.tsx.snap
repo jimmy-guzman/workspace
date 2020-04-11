@@ -2,7 +2,8 @@
 
 exports[`<TechList /> should render default snapshot 1`] = `
 <ul
-  style="text-align: center;"
+  class="TechList"
+  style="text-align: center; list-style: none; padding: 0px;"
 >
   <li
     class="badge"
@@ -24,7 +25,8 @@ exports[`<TechList /> should render default snapshot 1`] = `
 
 exports[`<TechList /> should render snapshot with not isEnglish 1`] = `
 <ul
-  style="text-align: center;"
+  class="TechList"
+  style="text-align: center; list-style: none; padding: 0px;"
 >
   <li
     class="badge"

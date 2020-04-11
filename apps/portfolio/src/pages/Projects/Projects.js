@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { projects } from '../lang/projects.json'
-import Project from './Project'
-import ProjectButtons from './ProjectButtons'
 
-class Projects extends Component {
+import { projects } from '../../lang/projects.json'
+import { Project, ProjectButtons } from '../../components'
+
+export class Projects extends Component {
   state = {
     projectIndex: 0,
     loadingProjectImage: true
@@ -64,5 +64,3 @@ class Projects extends Component {
 Projects.propTypes = {
   isEnglish: PropTypes.bool.isRequired
 }
-
-export default Projects
