@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Project, ProjectButtons } from '../../components'
+import { Project, ProjectButtons } from '@portfolio/components'
 
 export interface ProjectsProps {
   isEnglish: boolean

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { DemoIcon, GithubIcon } from '../../SVGs'
+import { DemoIcon, GithubIcon } from '@portfolio/SVGs'
 import { ProgressBar } from '../ProgressBar'
 import { TechList } from '../TechList'
 
