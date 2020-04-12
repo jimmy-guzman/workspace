@@ -14,18 +14,10 @@ const setupProjects = (
 }
 
 describe('<Projects />', () => {
-  it('should render english snapshot', () => {
-    const { container } = setupProjects()
+  it('should render first project', () => {
+    const { getByText } = setupProjects()
 
-    expect(container.firstChild).toMatchSnapshot()
-  })
-  it('should render spanish snapshot', () => {
-    const { container } = setupProjects({
-      isEnglish: false,
-      projects: defaultProjects,
-    })
-
-    expect(container.firstChild).toMatchSnapshot()
+    expect(getByText(defaultProjects[0].name)).toBeInTheDocument()
   })
   it('should render next project', () => {
     const { getByLabelText, getByText } = setupProjects()
