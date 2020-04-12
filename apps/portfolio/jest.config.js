@@ -8,4 +8,8 @@ module.exports = {
   name,
   displayName: name,
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    ...base.moduleNameMapper,
+    '^@portfolio(.*)$': '<rootDir>/src$1',
+  },
 }

@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const { cachePath, postCssConfigPath, targetPath } = require('./utils')
 
@@ -88,6 +89,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new ForkTsCheckerWebpackPlugin(),
     new HtmlWebPackPlugin({
       template: 'src/index.html',
       filename: './index.html',
