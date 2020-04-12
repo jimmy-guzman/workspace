@@ -12,4 +12,9 @@ module.exports = {
     ...base.moduleNameMapper,
     '^@portfolio(.*)$': '<rootDir>/src$1',
   },
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    'apps/portfolio/src/utils/withThemeProvider',
+    'apps/portfolio/src/utils/withMockRouter',
+  ],
 }
