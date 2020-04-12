@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent } from '../../test-utils'
 
 import { projects as defaultProjects } from '../../lang/projects.json'
 import { Projects, ProjectsProps } from './Projects'

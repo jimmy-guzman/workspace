@@ -1,19 +1,9 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
-import { Router } from 'react-router-dom'
-import { createMemoryHistory } from 'history'
+import { render, fireEvent } from '../test-utils'
 
 import { App } from './App'
 
-const setupApp = () => {
-  const history = createMemoryHistory()
-
-  return render(
-    <Router history={history}>
-      <App />
-    </Router>
-  )
-}
+const setupApp = () => render(<App />)
 
 describe('<App />', () => {
   it('should render Home', () => {

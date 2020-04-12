@@ -1,15 +1,12 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent } from '../../test-utils'
 
-import { withMockRouter } from '../../utils'
 import { Options, OptionsProps } from './Options'
 
 const mockUpdateLang = jest.fn()
 
 const setupOptions = (props?: Pick<OptionsProps, 'isEnglish'>) => {
-  return render(
-    withMockRouter(<Options {...props} updateLang={mockUpdateLang} />)
-  )
+  return render(<Options {...props} updateLang={mockUpdateLang} />)
 }
 
 describe('<Options />', () => {
