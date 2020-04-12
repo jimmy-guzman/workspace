@@ -1,7 +1,7 @@
 const fs = require('fs')
 
-const packages = fs.readdirSync('./packages/').map((file) => file)
-const apps = fs.readdirSync('./apps/').map((file) => file)
+const packages = fs.readdirSync('./packages/').map(file => file)
+const apps = fs.readdirSync('./apps/').map(file => file)
 const scopes = ['workspace', 'stories', ...packages, ...apps]
 
 module.exports = {
