@@ -16,14 +16,16 @@ const setupHome = (props?: HomeProps) => {
 }
 
 describe('<Home />', () => {
-  it('should render default snapshot', () => {
-    const { container } = setupHome()
+  it('should render english text', () => {
+    const { getByText } = setupHome()
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(getByText(/Hi, I'm Jimmy/)).toMatchSnapshot()
+    expect(getByText(/I'm a Web Developer/)).toMatchSnapshot()
   })
   it('should render snapshot with not isEnglish', () => {
-    const { container } = setupHome({ isEnglish: false })
+    const { getByText } = setupHome({ isEnglish: false })
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(getByText('Hola, Soy Jimmy')).toMatchSnapshot()
+    expect(getByText('Soy un Desarrollador de Web')).toMatchSnapshot()
   })
 })

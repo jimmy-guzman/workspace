@@ -7,7 +7,7 @@ export interface AboutProps {
   isEnglish?: boolean
 }
 
-export const About = ({ isEnglish }: AboutProps) => (
+export const About = ({ isEnglish = true }: AboutProps) => (
   <main className='light'>
     <section className='about grid__row'>
       <div className='card grid__col--6'>
