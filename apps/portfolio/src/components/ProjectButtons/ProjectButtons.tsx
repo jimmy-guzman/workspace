@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PrevIcon, NextIcon } from '../../SVGs'
+import { PrevIcon, NextIcon } from '@portfolio/SVGs'
 
 export interface ProjectButtonsProps {
   renderPrev: () => void
