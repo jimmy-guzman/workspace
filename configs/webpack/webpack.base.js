@@ -96,6 +96,8 @@ module.exports = {
       favicon: 'src/img/favicon.ico',
     }),
     new CircularDependencyPlugin({
+      exclude: /node_modules/,
+      include: /src/,
       failOnError: false,
       allowAsyncCycles: true,
     }),
