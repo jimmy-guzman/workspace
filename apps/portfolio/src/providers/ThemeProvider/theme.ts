@@ -5,4 +5,7 @@ export const theme = {
     tertiary: '#292b2f',
     quaternary: '#018185',
   },
+  font: {
+    family: "'Oswald', Impact, 'Franklin Gothic Bold', sans-serif",
+  },
 }
