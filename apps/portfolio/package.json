@@ -23,8 +23,8 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "start": "webpack-dev-server --config ../../configs/webpack/webpack.dev.js",
-    "build": "webpack  --config ../../configs/webpack/webpack.prod.js",
+    "start": "webpack-dev-server --env development",
+    "build": "webpack --env production",
     "test": "jest"
   },
   "bugs": {

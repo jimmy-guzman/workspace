@@ -4,7 +4,10 @@
   "include": ["./src/**/*"],
   "compilerOptions": {
     "allowJs": true,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@portfolio/*": ["apps/portfolio/src/*"]
+    }
   },
   "exclude": ["node_modules", "*.test.*", "dist"]
 }
