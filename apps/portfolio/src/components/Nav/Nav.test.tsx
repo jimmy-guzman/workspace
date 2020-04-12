@@ -1,11 +1,10 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render } from '../../test-utils'
 
-import { withMockRouter } from '../../utils'
 import { Nav, NavProps, defaultLinks } from './Nav'
 
 const setupNav = (props?: Pick<NavProps, 'isEnglish'>) => {
-  return render(withMockRouter(<Nav {...props} links={defaultLinks} />))
+  return render(<Nav {...props} links={defaultLinks} />)
 }
 
 describe('<Nav />', () => {
