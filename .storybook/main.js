@@ -1,3 +1,4 @@
+const path = require('path')
 const custom = require('../configs/webpack/webpack.dev')
 
 module.exports = {
@@ -22,6 +23,7 @@ module.exports = {
 
     config.resolve = {
       ...config.resolve,
+      alias: { '@portfolio': path.join(process.cwd(), 'apps/portfolio/src') },
       extensions: custom.resolve.extensions,
     }
 
