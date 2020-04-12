@@ -10,7 +10,6 @@ module.exports = {
     },
   },
   coverageReporters: ['html', 'text'],
-
   verbose: true,
   moduleNameMapper: {
     '^.+\\.(css|scss)$': 'identity-obj-proxy',
