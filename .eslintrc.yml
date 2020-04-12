@@ -27,9 +27,15 @@ plugins:
   - prettier
   - jest
 rules:
+  no-console: warn
+  prefer-const: error
   prettier/prettier: error
   react-hooks/rules-of-hooks: error
   react-hooks/exhaustive-deps: error
+  jest/no-large-snapshots:
+    - warn
+    - maxSize: 60
+      inlineMaxSize: 6
 overrides:
   - files:
       - '**/*.ts?(x)'

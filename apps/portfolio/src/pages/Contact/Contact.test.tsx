@@ -5,6 +5,8 @@ import { render } from '@testing-library/react'
 
 import { Contact, ContactProps } from './Contact'
 
+import contact from '@portfolio/lang/contact.json'
+
 const setupContact = (props?: ContactProps) => {
   const history = createMemoryHistory()
 
@@ -16,14 +18,14 @@ const setupContact = (props?: ContactProps) => {
 }
 
 describe('<Contact />', () => {
-  it('should render default snapshot', () => {
-    const { container } = setupContact()
+  it('should render english content', () => {
+    const { getByText } = setupContact()
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(getByText(contact.english)).toBeInTheDocument()
   })
   it('should render snapshot with not isEnglish', () => {
-    const { container } = setupContact({ isEnglish: false })
+    const { getByText } = setupContact({ isEnglish: false })
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(getByText(contact.spanish)).toBeInTheDocument()
   })
 })
