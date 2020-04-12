@@ -1,9 +1,8 @@
 import React from 'react'
-
-import './ProgressBar.scss'
+import { Styled } from './ProgressBar.styles'
 
 export const ProgressBar = () => (
-  <div className='progress-bar'>
-    <div className='indeterminate' />
-  </div>
+  <Styled.Bar>
+    <Styled.Progress />
+  </Styled.Bar>
 )

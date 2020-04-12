@@ -1,6 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Projects /> should render english snapshot 1`] = `
+.c0 {
+  margin: 0;
+  position: relative;
+  height: 8px;
+  display: block;
+  width: 100%;
+  background-color: #292b2f;
+  overflow: hidden;
+}
+
+.c1 {
+  background-color: #018185;
+}
+
+.c1:before {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left,right;
+  -webkit-animation: emTRrC 2.1s cubic-bezier(0.65,0.815,0.735,0.395) infinite;
+  animation: emTRrC 2.1s cubic-bezier(0.65,0.815,0.735,0.395) infinite;
+}
+
+.c1:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left,right;
+  -webkit-animation: gbxbMm 2.1s cubic-bezier(0.165,0.84,0.44,1) infinite;
+  animation: gbxbMm 2.1s cubic-bezier(0.165,0.84,0.44,1) infinite;
+  -webkit-animation-delay: 1.15s;
+  animation-delay: 1.15s;
+}
+
 <main
   class="light"
 >
@@ -61,10 +101,10 @@ exports[`<Projects /> should render english snapshot 1`] = `
           </div>
         </div>
         <div
-          class="progress-bar"
+          class="c0"
         >
           <div
-            class="indeterminate"
+            class="c1"
           />
         </div>
         <img
@@ -164,6 +204,46 @@ exports[`<Projects /> should render english snapshot 1`] = `
 `;
 
 exports[`<Projects /> should render spanish snapshot 1`] = `
+.c0 {
+  margin: 0;
+  position: relative;
+  height: 8px;
+  display: block;
+  width: 100%;
+  background-color: #292b2f;
+  overflow: hidden;
+}
+
+.c1 {
+  background-color: #018185;
+}
+
+.c1:before {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left,right;
+  -webkit-animation: emTRrC 2.1s cubic-bezier(0.65,0.815,0.735,0.395) infinite;
+  animation: emTRrC 2.1s cubic-bezier(0.65,0.815,0.735,0.395) infinite;
+}
+
+.c1:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left,right;
+  -webkit-animation: gbxbMm 2.1s cubic-bezier(0.165,0.84,0.44,1) infinite;
+  animation: gbxbMm 2.1s cubic-bezier(0.165,0.84,0.44,1) infinite;
+  -webkit-animation-delay: 1.15s;
+  animation-delay: 1.15s;
+}
+
 <main
   class="light"
 >
@@ -224,10 +304,10 @@ exports[`<Projects /> should render spanish snapshot 1`] = `
           </div>
         </div>
         <div
-          class="progress-bar"
+          class="c0"
         >
           <div
-            class="indeterminate"
+            class="c1"
           />
         </div>
         <img
