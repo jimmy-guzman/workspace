@@ -5,6 +5,7 @@ import { useDynamicHeight } from '@jimmy-guzman/hooks'
 import { useLanguage } from '../hooks'
 import { Home, Contact, About, Projects } from '../pages'
 import { Nav, Options } from '../components'
+import { projects as projectsLang } from '../lang/projects.json'
 
 export const App = () => {
   const [isEnglish, updateLang] = useLanguage()
@@ -18,7 +19,9 @@ export const App = () => {
         <Route path='/about' render={() => <About isEnglish={isEnglish} />} />
         <Route
           path='/projects/'
-          render={() => <Projects isEnglish={isEnglish} />}
+          render={() => (
+            <Projects projects={projectsLang} isEnglish={isEnglish} />
+          )}
         />
         <Route
           path='/contact'
