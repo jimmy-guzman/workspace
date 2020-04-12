@@ -23,10 +23,15 @@ const setupProject = (props: ProjectProps = defaulProps) => {
 }
 
 describe('<Project />', () => {
-  it('should render default snapshot', () => {
-    const { container } = setupProject()
+  it('should have english description', () => {
+    const { getByText } = setupProject()
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(getByText(defaulProps.project.description)).toBeInTheDocument()
+  })
+  it('should have spanish description', () => {
+    const { getByText } = setupProject({ ...defaulProps, isEnglish: false })
+
+    expect(getByText(defaulProps.project.spanish)).toBeInTheDocument()
   })
   it('should call onProjectImageLoaded when image renders', () => {
     const { getByAltText } = setupProject()
