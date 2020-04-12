@@ -1,7 +1,7 @@
 import React from 'react'
-import { render, fireEvent } from '../../test-utils'
+import { render, fireEvent } from '@portfolio/test-utils'
 
-import { projects as defaultProjects } from '../../lang/projects.json'
+import { projects as defaultProjects } from '@portfolio/lang/projects.json'
 import { Projects, ProjectsProps } from './Projects'
 
 const setupProjects = (

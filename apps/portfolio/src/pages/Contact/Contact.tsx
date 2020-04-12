@@ -1,7 +1,7 @@
 import React from 'react'
 
-import contact from '../../lang/contact.json'
-import { GithubIcon, LinkedinIcon, EmailIcon } from '../../SVGs'
+import contact from '@portfolio/lang/contact.json'
+import { GithubIcon, LinkedinIcon, EmailIcon } from '@portfolio/SVGs'
 
 export interface ContactProps {
   isEnglish?: boolean
