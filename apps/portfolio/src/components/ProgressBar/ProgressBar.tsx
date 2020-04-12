@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Styled } from './ProgressBar.styles'
 
 export const ProgressBar = () => (
