@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-import { projects as defaultProjects } from '../../lang/projects.json'
 import { Project, ProjectButtons } from '../../components'
 
 export interface ProjectsProps {
@@ -8,10 +7,7 @@ export interface ProjectsProps {
   projects: Project[]
 }
 
-export const Projects = ({
-  isEnglish,
-  projects = defaultProjects,
-}: ProjectsProps) => {
+export const Projects = ({ isEnglish, projects }: ProjectsProps) => {
   const [projectIndex, setProjectIndex] = useState<number>(0)
   const [loadingProjectImage, setLoadingProjectImage] = useState<boolean>(true)
 
