@@ -1,20 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Nav /> should render default snapshot 1`] = `
+.c1 {
+  font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
+  font-size: 1.3333333333333333em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #d7d5d9;
+  fill: #d7d5d9;
+}
+
+.c1:hover,
+.c1.active {
+  color: #40af93;
+  fill: #40af93;
+}
+
+.c0 {
+  background: #292b2f;
+  width: 100%;
+  height: 4.111111111111111em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 <nav
-  class="main-nav"
+  class="c0"
 >
   <a
+    class="c1"
     href="/about"
   >
     About
   </a>
   <a
+    class="c1"
     href="/projects"
   >
     Projects
   </a>
   <a
+    class="c1"
     href="/contact"
   >
     Contact
@@ -23,20 +62,59 @@ exports[`<Nav /> should render default snapshot 1`] = `
 `;
 
 exports[`<Nav /> should render snapshot with not isEnglish 1`] = `
+.c1 {
+  font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
+  font-size: 1.3333333333333333em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #d7d5d9;
+  fill: #d7d5d9;
+}
+
+.c1:hover,
+.c1.active {
+  color: #40af93;
+  fill: #40af93;
+}
+
+.c0 {
+  background: #292b2f;
+  width: 100%;
+  height: 4.111111111111111em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 <nav
-  class="main-nav"
+  class="c0"
 >
   <a
+    class="c1"
     href="/about"
   >
     Sobre Mi
   </a>
   <a
+    class="c1"
     href="/projects"
   >
     Proyectos
   </a>
   <a
+    class="c1"
     href="/contact"
   >
     Contacto
