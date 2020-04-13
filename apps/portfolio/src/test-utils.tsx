@@ -5,12 +5,18 @@ import { createMemoryHistory } from 'history'
 
 import { ThemeProvider } from './providers'
 
-const Providers: React.ComponentType = ({
+const Providers: React.ComponentType<{ route?: string }> = ({
   children,
+  route,
 }: {
+  route?: string
   children?: React.ReactNode
 }) => {
   const history = createMemoryHistory()
+
+  if (route) {
+    history.push(route)
+  }
 
   return (
     <Router history={history}>
@@ -19,10 +25,21 @@ const Providers: React.ComponentType = ({
   )
 }
 
+Providers.displayName = 'ss'
+
 const customRender = (
   ui: React.ReactElement,
-  options?: Omit<RenderOptions, 'queries'>
-) => render(ui, { wrapper: Providers, ...options })
+  options?: Omit<RenderOptions, 'queries'>,
+  route?: string
+) => {
+  const wrapper: React.ComponentType = ({
+    children,
+  }: {
+    children?: React.ReactNode
+  }) => <Providers route={route}>{children}</Providers>
+
+  return render(ui, { wrapper, ...options })
+}
 
 export * from '@testing-library/react'
 
