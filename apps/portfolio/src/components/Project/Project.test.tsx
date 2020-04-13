@@ -3,10 +3,7 @@ import { render, fireEvent } from '../../test-utils'
 
 import { Project, ProjectProps } from './Project'
 
-const mockOnProjectImageLoaded = jest.fn()
 const defaulProps = {
-  loadingProjectImage: false,
-  onProjectImageLoaded: mockOnProjectImageLoaded,
   isEnglish: true,
   project: {
     name: 'name',
@@ -38,12 +35,11 @@ describe('<Project />', () => {
 
     fireEvent(getByAltText('name'), new Event('load'))
 
-    expect(mockOnProjectImageLoaded).toHaveBeenCalledTimes(1)
+    expect(getByAltText('name')).not.toHaveStyle('visibility: hidden')
   })
   it('should contain image with no visiblity when image is not loaded', () => {
     const { getByAltText } = setupProject({
       ...defaulProps,
-      loadingProjectImage: true,
     })
 
     expect(getByAltText('name')).toHaveStyle('visibility: hidden')
