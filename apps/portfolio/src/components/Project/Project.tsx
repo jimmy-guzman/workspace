@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { DemoIcon, GithubIcon } from '@portfolio/SVGs'
 import { ProgressBar } from '../ProgressBar'
@@ -14,21 +14,19 @@ export interface Project {
 }
 
 export interface ProjectProps {
-  loadingProjectImage: boolean
-  onProjectImageLoaded: () => void
   isEnglish: boolean
   project: Project
 }
 
-export const Project = ({
-  project,
-  isEnglish,
-  onProjectImageLoaded,
-  loadingProjectImage,
-}: ProjectProps) => {
+export const Project = ({ project, isEnglish }: ProjectProps) => {
+  const [loadingImage, setLoadingImage] = useState<boolean>(true)
   const imgixUrl = `https://jimmy-guzman.imgix.net/project-screenshots/`
   const imgParams = `png?w=400?fm=png&auto=format`
   const imgUrl = `${imgixUrl + project.repo}.${imgParams}`
+
+  useEffect(() => {
+    setLoadingImage(true)
+  }, [project])
 
   return (
     <div className='project grid__row'>
@@ -54,10 +52,10 @@ export const Project = ({
             </a>
           </div>
         </div>
-        {loadingProjectImage && <ProgressBar />}
+        {loadingImage && <ProgressBar />}
         <img
-          style={{ ...(loadingProjectImage && { visibility: 'hidden' }) }}
-          onLoad={onProjectImageLoaded}
+          style={{ ...(loadingImage && { visibility: 'hidden' }) }}
+          onLoad={() => setLoadingImage(false)}
           alt={`${project.name}`}
           srcSet={`${imgUrl} 1x,
         ${imgUrl}&fit=max&q=40&dpr=2 2x,
