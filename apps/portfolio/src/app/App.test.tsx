@@ -3,7 +3,7 @@ import { render, fireEvent } from '@portfolio/test-utils'
 
 import { App } from './App'
 
-const setupApp = () => render(<App />)
+const setupApp = (route?: string) => render(<App />, {}, route)
 
 describe('<App />', () => {
   it('should render Home', () => {
@@ -31,5 +31,14 @@ describe('<App />', () => {
     fireEvent.click(getByText(/Contact/i))
 
     expect(container.innerHTML).toMatch('hello@jimmyguzman.com')
+  })
+  it('should render 404', () => {
+    const { container } = setupApp('bad-route')
+
+    ;(global as any).window = { location: { pathname: null } }
+
+    expect(container.innerHTML).toMatch(
+      '404 Error: URL does not match any existing paths!'
+    )
   })
 })
