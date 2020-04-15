@@ -1,7 +1,7 @@
 import React from 'react'
-import { render } from '@testing-library/react'
 
 import { ProjectButtons, ProjectButtonsProps } from './ProjectButtons'
+import { render } from '@portfolio/test-utils'
 
 const setupProjectButtons = (
   props: ProjectButtonsProps = {

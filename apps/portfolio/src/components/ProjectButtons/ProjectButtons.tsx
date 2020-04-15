@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { PrevIcon, NextIcon } from '@portfolio/SVGs'
+import { Styled } from '../Button'
 
 export interface ProjectButtonsProps {
   renderPrev: () => void
@@ -12,21 +13,21 @@ export const ProjectButtons = ({
   renderPrev,
 }: ProjectButtonsProps) => (
   <div className='projects__buttons'>
-    <button
+    <Styled.Button
       type='button'
-      className='btn__secondary'
+      secondary
       onClick={renderPrev}
       aria-label='Previous'
     >
       <PrevIcon height='48' width='48' />
-    </button>
-    <button
+    </Styled.Button>
+    <Styled.Button
       type='button'
-      className='btn__secondary'
+      secondary
       onClick={renderNext}
       aria-label='Next'
     >
       <NextIcon height='48' width='48' />
-    </button>
+    </Styled.Button>
   </div>
 )
