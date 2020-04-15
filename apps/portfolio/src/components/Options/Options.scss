@@ -21,12 +21,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  button {
-    &:hover,
-    &.active {
-      color: #40af93;
-    }
-  }
 }
 
 .home-link {

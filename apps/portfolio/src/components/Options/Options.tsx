@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { Button } from './Button'
+import { Styled } from '../Button'
 
 import './Options.scss'
 
@@ -26,18 +26,20 @@ export const Options = ({
       Jimmy Guzman
     </NavLink>
     <div className='options__lang'>
-      <Button
-        className={!isEnglish ? 'btn__primary active' : 'btn__primary'}
+      <Styled.Button
+        primary
+        active={!isEnglish}
         onClick={() => updateLang('spanish')}
       >
         SP
-      </Button>
-      <Button
-        className={isEnglish ? 'btn__primary active' : 'btn__primary'}
+      </Styled.Button>
+      <Styled.Button
+        primary
+        active={isEnglish}
         onClick={() => updateLang('english')}
       >
         ENG
-      </Button>
+      </Styled.Button>
     </div>
   </div>
 )
