@@ -1,20 +1,21 @@
 import React from 'react'
 
-import './TechList.scss'
+import { Styled } from '../Badge'
+import { Styled as TechListStyles } from './Techlist.styles'
 
 export interface TechListProps {
   technologies: string[]
 }
 
 export const TechList = ({ technologies }: TechListProps) => (
-  <ul
+  <TechListStyles.List
     className='TechList'
     style={{ textAlign: 'center', listStyle: 'none', padding: 0 }}
   >
     {technologies.map(technology => (
-      <li className='badge' key={technology}>
-        {technology}
+      <li key={technology}>
+        <Styled.Badge>{technology}</Styled.Badge>
       </li>
     ))}
-  </ul>
+  </TechListStyles.List>
 )

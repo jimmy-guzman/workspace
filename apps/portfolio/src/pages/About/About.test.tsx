@@ -1,20 +1,10 @@
 import React from 'react'
-import { Router } from 'react-router-dom'
-import { createMemoryHistory } from 'history'
-import { render } from '@testing-library/react'
 
+import { render } from '@portfolio/test-utils'
 import { About, AboutProps } from './About'
 import aboutLang from '@portfolio/lang/about.json'
 
-const setupAbout = (props?: AboutProps) => {
-  const history = createMemoryHistory()
-
-  return render(
-    <Router history={history}>
-      <About {...props} />
-    </Router>
-  )
-}
+const setupAbout = (props?: AboutProps) => render(<About {...props} />)
 
 describe('<About />', () => {
   it('should render render english content', () => {
