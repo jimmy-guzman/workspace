@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TechList /> should render default snapshot 1`] = `
-.c1 {
+.c2 {
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
   display: inline-block;
   background: #d7d5d9;
@@ -11,6 +11,10 @@ exports[`<TechList /> should render default snapshot 1`] = `
 }
 
 .c0 {
+  list-style: none;
+  padding: 0;
+  color: #292b2f;
+  text-align: center;
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
@@ -25,27 +29,36 @@ exports[`<TechList /> should render default snapshot 1`] = `
   justify-content: center;
 }
 
+.c1 {
+  margin: 0.3333333333333333em;
+}
+
 <ul
-  class="c0 TechList"
-  style="text-align: center; list-style: none; padding: 0px;"
+  class="c0"
 >
-  <li>
+  <li
+    class="c1"
+  >
     <span
-      class="c1"
+      class="c2"
     >
       JavaScript
     </span>
   </li>
-  <li>
+  <li
+    class="c1"
+  >
     <span
-      class="c1"
+      class="c2"
     >
       ReactJS
     </span>
   </li>
-  <li>
+  <li
+    class="c1"
+  >
     <span
-      class="c1"
+      class="c2"
     >
       Redux
     </span>
@@ -54,7 +67,7 @@ exports[`<TechList /> should render default snapshot 1`] = `
 `;
 
 exports[`<TechList /> should render snapshot with not isEnglish 1`] = `
-.c1 {
+.c2 {
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
   display: inline-block;
   background: #d7d5d9;
@@ -64,6 +77,10 @@ exports[`<TechList /> should render snapshot with not isEnglish 1`] = `
 }
 
 .c0 {
+  list-style: none;
+  padding: 0;
+  color: #292b2f;
+  text-align: center;
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,27 +95,36 @@ exports[`<TechList /> should render snapshot with not isEnglish 1`] = `
   justify-content: center;
 }
 
+.c1 {
+  margin: 0.3333333333333333em;
+}
+
 <ul
-  class="c0 TechList"
-  style="text-align: center; list-style: none; padding: 0px;"
+  class="c0"
 >
-  <li>
+  <li
+    class="c1"
+  >
     <span
-      class="c1"
+      class="c2"
     >
       JavaScript
     </span>
   </li>
-  <li>
+  <li
+    class="c1"
+  >
     <span
-      class="c1"
+      class="c2"
     >
       ReactJS
     </span>
   </li>
-  <li>
+  <li
+    class="c1"
+  >
     <span
-      class="c1"
+      class="c2"
     >
       Redux
     </span>
