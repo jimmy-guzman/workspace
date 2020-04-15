@@ -3,10 +3,10 @@ module.exports = {
   cacheDirectory: '../../.cache/jest',
   coverageThreshold: {
     global: {
-      branches: 95,
-      functions: 92,
-      lines: 95,
-      statements: 95,
+      branches: 96,
+      functions: 95,
+      lines: 97,
+      statements: 97,
     },
   },
   coverageReporters: ['html', 'text'],

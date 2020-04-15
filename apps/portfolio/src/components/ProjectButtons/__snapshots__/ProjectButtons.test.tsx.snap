@@ -1,12 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ProjectButtons /> should render default snapshot 1`] = `
+.c0 {
+  background: #d7d5d9;
+  border: none;
+  outline: none;
+  font-size: 1.3333333333333333em;
+  font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #292b2f;
+  fill: #292b2f;
+}
+
+.c0:hover,
+.c0:active,
+.c0:focus {
+  color: #40af93;
+  fill: #40af93;
+}
+
 <div
   class="projects__buttons"
 >
   <button
     aria-label="Previous"
-    class="btn__secondary"
+    class="c0"
     type="button"
   >
     <svg
@@ -23,7 +43,7 @@ exports[`<ProjectButtons /> should render default snapshot 1`] = `
   </button>
   <button
     aria-label="Next"
-    class="btn__secondary"
+    class="c0"
     type="button"
   >
     <svg

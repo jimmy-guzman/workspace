@@ -31,13 +31,13 @@ describe('<Options />', () => {
       isEnglish: false,
     })
 
-    expect(getByText('SP')).toHaveClass('active')
+    expect(getByText('ENG')).toHaveStyle('color: rgb(215, 213, 217)')
   })
   it('should set correct class when english', () => {
     const { getByText } = setupOptions({
       isEnglish: true,
     })
 
-    expect(getByText('ENG')).toHaveClass('active')
+    expect(getByText('ENG')).toHaveStyle('color: rgb(64, 175, 147)')
   })
 })
