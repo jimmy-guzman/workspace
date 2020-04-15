@@ -1,6 +1,3 @@
 .contact {
   text-align: center;
-  ul {
-    @include flex(flex, row, space-around);
-  }
 }
