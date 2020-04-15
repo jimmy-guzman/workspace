@@ -1,47 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TechList /> should render default snapshot 1`] = `
+.c1 {
+  font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
+  display: inline-block;
+  background: #d7d5d9;
+  border-radius: 0.16666666666666666em;
+  color: #292b2f;
+  padding: 0.2777777777777778em;
+}
+
+.c0 {
+  font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 <ul
-  class="TechList"
+  class="c0 TechList"
   style="text-align: center; list-style: none; padding: 0px;"
 >
-  <li
-    class="badge"
-  >
-    JavaScript
+  <li>
+    <span
+      class="c1"
+    >
+      JavaScript
+    </span>
   </li>
-  <li
-    class="badge"
-  >
-    ReactJS
+  <li>
+    <span
+      class="c1"
+    >
+      ReactJS
+    </span>
   </li>
-  <li
-    class="badge"
-  >
-    Redux
+  <li>
+    <span
+      class="c1"
+    >
+      Redux
+    </span>
   </li>
 </ul>
 `;
 
 exports[`<TechList /> should render snapshot with not isEnglish 1`] = `
+.c1 {
+  font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
+  display: inline-block;
+  background: #d7d5d9;
+  border-radius: 0.16666666666666666em;
+  color: #292b2f;
+  padding: 0.2777777777777778em;
+}
+
+.c0 {
+  font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 <ul
-  class="TechList"
+  class="c0 TechList"
   style="text-align: center; list-style: none; padding: 0px;"
 >
-  <li
-    class="badge"
-  >
-    JavaScript
+  <li>
+    <span
+      class="c1"
+    >
+      JavaScript
+    </span>
   </li>
-  <li
-    class="badge"
-  >
-    ReactJS
+  <li>
+    <span
+      class="c1"
+    >
+      ReactJS
+    </span>
   </li>
-  <li
-    class="badge"
-  >
-    Redux
+  <li>
+    <span
+      class="c1"
+    >
+      Redux
+    </span>
   </li>
 </ul>
 `;
