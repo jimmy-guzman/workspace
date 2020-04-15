@@ -1,6 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Options /> should render default snapshot 1`] = `
+.c0 {
+  background: #292b2f;
+  border: none;
+  outline: none;
+  font-size: 1.3333333333333333em;
+  font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #40af93;
+  fill: #40af93;
+}
+
+.c0:hover,
+.c0:active,
+.c0:focus {
+  color: #40af93;
+  fill: #40af93;
+}
+
+.c1 {
+  background: #292b2f;
+  border: none;
+  outline: none;
+  font-size: 1.3333333333333333em;
+  font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #d7d5d9;
+  fill: #d7d5d9;
+}
+
+.c1:hover,
+.c1:active,
+.c1:focus {
+  color: #40af93;
+  fill: #40af93;
+}
+
 <div
   class="options"
 >
@@ -15,14 +55,12 @@ exports[`<Options /> should render default snapshot 1`] = `
     class="options__lang"
   >
     <button
-      class="btn__primary active"
-      type="button"
+      class="c0"
     >
       SP
     </button>
     <button
-      class="btn__primary"
-      type="button"
+      class="c1"
     >
       ENG
     </button>
