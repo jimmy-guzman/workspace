@@ -1,21 +1,11 @@
 import React from 'react'
-import { Router } from 'react-router-dom'
-import { createMemoryHistory } from 'history'
-import { render } from '@testing-library/react'
 
 import { Contact, ContactProps } from './Contact'
 
 import contact from '@portfolio/lang/contact.json'
+import { render } from '@portfolio/test-utils'
 
-const setupContact = (props?: ContactProps) => {
-  const history = createMemoryHistory()
-
-  return render(
-    <Router history={history}>
-      <Contact {...props} />
-    </Router>
-  )
-}
+const setupContact = (props?: ContactProps) => render(<Contact {...props} />)
 
 describe('<Contact />', () => {
   it('should render english content', () => {
