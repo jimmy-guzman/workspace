@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { Styled } from '../Button'
 
 import './Options.scss'
+import { Link } from '../Link'
 
 export interface OptionsProps {
   isEnglish?: boolean
@@ -17,14 +18,17 @@ export const Options = ({
   activeRoute = '/',
 }: OptionsProps) => (
   <div className='options'>
-    <NavLink
+    <Link
+      color='secondary'
+      as={NavLink}
       exact
       to={activeRoute}
       className='home-link'
       activeClassName='active-home'
     >
       Jimmy Guzman
-    </NavLink>
+    </Link>
+
     <div className='options__lang'>
       <Styled.Button
         primary

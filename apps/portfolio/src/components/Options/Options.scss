@@ -8,7 +8,6 @@
 }
 
 .options {
-  font-family: 'Oswald', Impact, 'Franklin Gothic Bold', sans-serif;
   background: #292b2f;
   width: 100%;
   display: flex;
@@ -36,16 +35,4 @@
   padding: 0;
   max-width: 0;
   overflow: hidden;
-}
-
-a {
-  text-decoration: none;
-  fill: #d7d5d9;
-  &:hover {
-    color: #d7d5d9;
-  }
-  &.active {
-    color: #40af93;
-    fill: #40af93;
-  }
 }

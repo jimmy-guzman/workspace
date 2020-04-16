@@ -4,9 +4,11 @@ const custom = require('../configs/webpack/webpack.dev')
 module.exports = {
   stories: ['../**/**/src/**/*.stories.(jsx|tsx|ts)'],
   addons: [
+    '@storybook/addon-knobs/register',
     '@storybook/addon-viewport/register',
     '@storybook/addon-docs',
     '@storybook/addon-actions/register',
+    '@storybook/addon-a11y/register',
   ],
 
   webpackFinal: config => {
@@ -15,6 +17,22 @@ module.exports = {
         rule.test = /\.(mjs|jsx|tsx?)$/
         rule.use.push({
           loader: require.resolve('react-docgen-typescript-loader'),
+          options: {
+            propFilter: prop => {
+              if (prop.parent) {
+                return (
+                  prop.name === 'color' ||
+                  !prop.parent.fileName.includes('node_modules')
+                )
+              }
+
+              return {
+                componentNameResolver: (exp, source) =>
+                  exp.getName() === 'StyledComponentClass' &&
+                  getDefaultExportForFile(source),
+              }
+            },
+          },
         })
       }
 
