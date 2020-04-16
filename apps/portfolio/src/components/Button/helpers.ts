@@ -1,11 +1,9 @@
 import { ButtonProps } from './interfaces'
 
 export const setButtonColor = (
-  props: ButtonProps,
+  { primary, secondary, theme, active }: ButtonProps,
   hover: boolean = false
 ): string | undefined => {
-  const { primary, secondary, theme, active } = props
-
   if (hover || active) {
     return theme.colors.primary
   }
@@ -22,15 +20,13 @@ export const setButtonColor = (
 
 export const setButtonFill = setButtonColor
 
-export const setBackground = (props: ButtonProps) => {
-  const { primary, secondary, theme } = props
-
+export const setBackground = ({ primary, secondary, theme }: ButtonProps) => {
   if (primary) {
     return theme.colors.tertiary
   }
 
   if (secondary) {
-    return theme.colors.secondary
+    return 'transparent'
   }
 
   return 'transparent'

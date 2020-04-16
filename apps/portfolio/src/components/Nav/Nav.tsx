@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { Styled } from './Nav.styles'
+import { NavLink } from 'react-router-dom'
+import { Link } from '../Link'
 
 export interface Links {
   link: string
@@ -20,9 +22,9 @@ export const defaultLinks: Links[] = [
 export const Nav = ({ isEnglish = true, links = defaultLinks }: NavProps) => (
   <Styled.Nav>
     {links.map(({ link, name, spanish }) => (
-      <Styled.NavLink to={link} key={link}>
+      <Link color='primary' size='big' as={NavLink} to={link} key={link}>
         {isEnglish ? name : spanish}
-      </Styled.NavLink>
+      </Link>
     ))}
   </Styled.Nav>
 )

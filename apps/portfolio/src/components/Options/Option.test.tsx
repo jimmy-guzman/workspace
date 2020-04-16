@@ -10,11 +10,6 @@ const setupOptions = (props?: Pick<OptionsProps, 'isEnglish'>) => {
 }
 
 describe('<Options />', () => {
-  it('should render default snapshot', () => {
-    const { container } = setupOptions()
-
-    expect(container.firstChild).toMatchSnapshot()
-  })
   it('should call updateLang with correct language', () => {
     const { getByText } = setupOptions()
 

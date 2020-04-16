@@ -4,17 +4,6 @@ body {
   font-size: $base__font-size;
 }
 
-a {
-  text-decoration: none;
-  color: $color-text-link--default;
-  fill: $color-text-link--default;
-  &:hover,
-  &.active {
-    color: $color-text-link--active;
-    fill: $color-text-link--active;
-  }
-}
-
 h1,
 h2 {
   margin: 0;
