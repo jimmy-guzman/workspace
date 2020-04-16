@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { DemoIcon, GithubIcon } from '@portfolio/SVGs'
 import { ProgressBar } from '../ProgressBar'
 import { TechList } from '../TechList'
+import { Link } from '../Link'
 
 export interface Project {
   name: string
@@ -34,22 +35,24 @@ export const Project = ({ project, isEnglish }: ProjectProps) => {
         <div className='project__bar'>
           <span>{project.name}</span>
           <div className='project__links'>
-            <a
+            <Link
+              color='primary'
               href={project.url}
               target='_blank'
               rel='noopener noreferrer'
               aria-label='View Demo'
             >
               <DemoIcon height='24' width='24' />
-            </a>
-            <a
+            </Link>
+            <Link
+              color='primary'
               href={`https://github.com/jimmy-guzman/${project.repo}`}
               target='_blank'
               rel='noopener noreferrer'
               aria-label='View Repo'
             >
               <GithubIcon height='24' width='24' />
-            </a>
+            </Link>
           </div>
         </div>
         {loadingImage && <ProgressBar />}

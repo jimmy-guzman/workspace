@@ -1,8 +1,0 @@
-.btn {
-  @include e(primary) {
-    @include button-setup(primary);
-  }
-  @include e(secondary) {
-    @include button-setup(secondary);
-  }
-}

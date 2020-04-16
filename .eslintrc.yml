@@ -8,6 +8,7 @@ extends:
   - plugin:@typescript-eslint/eslint-recommended
   - plugin:prettier/recommended
   - prettier/@typescript-eslint
+  - plugin:jsx-a11y/recommended
   - plugin:jest/recommended
   - plugin:jest/style
 globals:
@@ -26,6 +27,7 @@ plugins:
   - '@typescript-eslint'
   - prettier
   - jest
+  - jsx-a11y
 rules:
   no-console: warn
   prefer-const: error
