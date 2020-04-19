@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components'
-import { em } from '@portfolio/utils'
+import { em, flex } from '@portfolio/utils'
 
 export interface ListProps {
   centered?: boolean
@@ -13,9 +13,12 @@ const List = styled.ul<ListProps>`
   color: ${({ theme }) => theme.colors.tertiary};
   text-align: ${({ centered }) => (centered ? 'center' : undefined)};
   font-family: ${({ theme }) => theme.font.family};
-  display: ${({ centered }) => (centered ? 'flex' : 'block')};
-  flex-flow: ${({ centered }) => (centered ? 'wrap' : undefined)};
-  justify-content: ${({ centered }) => (centered ? 'center' : undefined)};
+  ${({ centered }) =>
+    flex(
+      centered ? 'flex' : 'block',
+      centered ? 'wrap' : undefined,
+      centered ? 'center' : undefined
+    )}
 `
 
 const ListItem = styled.li<ListProps>`

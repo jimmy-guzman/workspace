@@ -1,3 +1,5 @@
+import { css } from 'styled-components'
+
 /**
  * - Calculates 'em' values from 'px' values
  * - Supports multiple 'px' values
@@ -32,3 +34,27 @@ export const mq = (
       return 'inherit'
   }
 }
+
+/**
+ * Returns flexbox styles based on params
+ * @param display `display:`
+ * @param flow `flex-flow:`
+ * @param justifyContent `justify-content:`
+ * @param alignItems `align-bottom:`
+ * @param flex `flex:`
+ * @example
+ * flex('flex', 'row', 'space-around', 'center')
+ */
+export const flex = (
+  display: string = 'flex',
+  flow?: string,
+  justifyContent?: string,
+  alignItems?: string,
+  flex?: string
+) => css`
+  display: ${display};
+  flex-flow: ${flow};
+  justify-content: ${justifyContent};
+  align-items: ${alignItems};
+  flex: ${flex};
+`
