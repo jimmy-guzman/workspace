@@ -1,9 +1,9 @@
-import 'normalize.css'
 import './scss/index.scss'
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import WebFont from 'webfontloader'
+import { Normalize } from 'styled-normalize'
 
 import { App } from './App'
 
@@ -15,6 +15,7 @@ WebFont.load({
 
 render(
   <Router>
+    <Normalize />
     <App />
   </Router>,
   document.getElementById('root')
