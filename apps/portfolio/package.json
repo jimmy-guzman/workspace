@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "@jimmy-guzman/hooks": "*",
-    "normalize.css": "8.0.1",
     "react-router-dom": "5.1.2",
     "react-transition-group": "4.3.0",
     "webfontloader": "1.6.28"
