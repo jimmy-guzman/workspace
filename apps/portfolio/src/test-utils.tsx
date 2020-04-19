@@ -1,6 +1,7 @@
 import React from 'react'
 import { render, RenderOptions } from '@testing-library/react'
 import { Router } from 'react-router-dom'
+import { StyleSheetManager } from 'styled-components'
 import { createMemoryHistory } from 'history'
 
 import { ThemeProvider } from './providers'
@@ -19,9 +20,11 @@ const Providers: React.ComponentType<{ route?: string }> = ({
   }
 
   return (
-    <Router history={history}>
-      <ThemeProvider>{children}</ThemeProvider>
-    </Router>
+    <StyleSheetManager disableVendorPrefixes>
+      <Router history={history}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </Router>
+    </StyleSheetManager>
   )
 }
 
