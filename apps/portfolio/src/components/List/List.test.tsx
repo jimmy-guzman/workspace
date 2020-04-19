@@ -26,7 +26,7 @@ describe('<Styled.List />', () => {
       }
 
       .c1 {
-        margin: 0.3333333333333333em;
+        margin: 0.33em;
       }
 
       <ul
