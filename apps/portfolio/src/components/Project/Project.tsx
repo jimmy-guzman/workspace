@@ -3,8 +3,17 @@ import React, { useState, useEffect } from 'react'
 import { DemoIcon, GithubIcon } from '@portfolio/SVGs'
 import { ProgressBar } from '../ProgressBar'
 import { TechList } from '../TechList'
-import { Link } from '../Link'
-import { Card } from '../Card'
+import {
+  StyledProject,
+  StyledProjectCard,
+  StyledProjectImage,
+  StyledProjectLinks,
+  StyledProjectLink,
+  StyledProjectInfo,
+  StyledProjectDesc,
+  StyledProjectBar,
+  StyledProjectName,
+} from './Project.styles'
 
 export interface Project {
   name: string
@@ -31,12 +40,12 @@ export const Project = ({ project, isEnglish }: ProjectProps) => {
   }, [project])
 
   return (
-    <div className='project grid__row'>
-      <Card className='project__image'>
-        <div className='project__bar'>
-          <span>{project.name}</span>
-          <div className='project__links'>
-            <Link
+    <StyledProject>
+      <StyledProjectCard>
+        <StyledProjectBar>
+          <StyledProjectName>{project.name}</StyledProjectName>
+          <StyledProjectLinks>
+            <StyledProjectLink
               color='primary'
               href={project.url}
               target='_blank'
@@ -44,8 +53,8 @@ export const Project = ({ project, isEnglish }: ProjectProps) => {
               aria-label='View Demo'
             >
               <DemoIcon height='24' width='24' />
-            </Link>
-            <Link
+            </StyledProjectLink>
+            <StyledProjectLink
               color='primary'
               href={`https://github.com/jimmy-guzman/${project.repo}`}
               target='_blank'
@@ -53,11 +62,11 @@ export const Project = ({ project, isEnglish }: ProjectProps) => {
               aria-label='View Repo'
             >
               <GithubIcon height='24' width='24' />
-            </Link>
-          </div>
-        </div>
+            </StyledProjectLink>
+          </StyledProjectLinks>
+        </StyledProjectBar>
         {loadingImage && <ProgressBar />}
-        <img
+        <StyledProjectImage
           style={{ ...(loadingImage && { visibility: 'hidden' }) }}
           onLoad={() => setLoadingImage(false)}
           alt={`${project.name}`}
@@ -66,13 +75,13 @@ export const Project = ({ project, isEnglish }: ProjectProps) => {
         ${imgUrl}&fit=max&q=20&dpr=3 3x`}
           src={`${imgUrl}`}
         />
-        <div className='project__info'>
+        <StyledProjectInfo>
           <TechList technologies={project.tech} />
-          <p className='project__desc'>
+          <StyledProjectDesc>
             {isEnglish ? project.description : project.spanish}
-          </p>
-        </div>
-      </Card>
-    </div>
+          </StyledProjectDesc>
+        </StyledProjectInfo>
+      </StyledProjectCard>
+    </StyledProject>
   )
 }
