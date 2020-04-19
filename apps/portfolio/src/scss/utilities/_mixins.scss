@@ -13,19 +13,19 @@
 }
 // media queries
 @mixin mq($break) {
-  @if $break== "small" {
+  @if $break== 'small' {
     @media (min-width: $brkpoint--sm) {
       @content;
     }
-  } @else if $break== "medium" {
+  } @else if $break== 'medium' {
     @media (min-width: $brkpoint--md + 1) {
       @content;
     }
-  } @else if $break== "large" {
+  } @else if $break== 'large' {
     @media (min-width: $brkpoint--lg) {
       @content;
     }
-  } @else if $break== "extra-large" {
+  } @else if $break== 'extra-large' {
     @media (min-width: $brkpoint--xl) {
       @content;
     }
@@ -41,19 +41,6 @@
   justify-content: $just;
   align-items: $items;
   flex: $flex;
-}
-
-// buttons
-@mixin button-setup($type) {
-  @extend %btn;
-  @extend %btn__#{$type};
-
-  &:focus {
-    @extend %btn__#{$type};
-  }
-  &:hover {
-    @extend %btn__#{$type}--hover;
-  }
 }
 
 // grid columns
