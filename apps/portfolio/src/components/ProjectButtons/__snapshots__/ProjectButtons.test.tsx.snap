@@ -5,7 +5,7 @@ exports[`<ProjectButtons /> should render default snapshot 1`] = `
   background: transparent;
   border: none;
   outline: none;
-  font-size: 1.3333333333333333em;
+  font-size: 1.33em;
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;

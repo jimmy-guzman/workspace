@@ -4,6 +4,7 @@ import { DemoIcon, GithubIcon } from '@portfolio/SVGs'
 import { ProgressBar } from '../ProgressBar'
 import { TechList } from '../TechList'
 import { Link } from '../Link'
+import { Card } from '../Card'
 
 export interface Project {
   name: string
@@ -31,7 +32,7 @@ export const Project = ({ project, isEnglish }: ProjectProps) => {
 
   return (
     <div className='project grid__row'>
-      <div className='project__image card'>
+      <Card className='project__image'>
         <div className='project__bar'>
           <span>{project.name}</span>
           <div className='project__links'>
@@ -71,7 +72,7 @@ export const Project = ({ project, isEnglish }: ProjectProps) => {
             {isEnglish ? project.description : project.spanish}
           </p>
         </div>
-      </div>
+      </Card>
     </div>
   )
 }
