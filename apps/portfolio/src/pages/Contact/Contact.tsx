@@ -3,8 +3,9 @@ import React from 'react'
 import contact from '@portfolio/lang/contact.json'
 import { GithubIcon, LinkedinIcon, EmailIcon } from '@portfolio/SVGs'
 import { Styled as StyledList } from '@portfolio/components/List'
-import { Link } from '@portfolio/components'
-import { Card } from '@portfolio/components'
+import { Link, Card } from '@portfolio/components'
+
+import './Contact.scss'
 
 export interface ContactProps {
   isEnglish?: boolean
