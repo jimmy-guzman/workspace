@@ -1,20 +1,3 @@
-.projects {
-  @include e(buttons) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    @include flex(flex, row, space-between, center);
-    @include mq(medium) {
-      bottom: 50%;
-    }
-    @include mq(large) {
-      left: 10%;
-      right: 10%;
-    }
-  }
-}
-
 .project {
   width: 100%;
   @include mq(medium) {

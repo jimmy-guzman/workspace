@@ -2,6 +2,7 @@ import React from 'react'
 
 import { PrevIcon, NextIcon } from '@portfolio/SVGs'
 import { Styled } from '../Button'
+import { StyledProjectButtons } from './ProjectButtons.styles'
 
 export interface ProjectButtonsProps {
   renderPrev: () => void
@@ -12,7 +13,7 @@ export const ProjectButtons = ({
   renderNext,
   renderPrev,
 }: ProjectButtonsProps) => (
-  <div className='projects__buttons'>
+  <StyledProjectButtons>
     <Styled.Button
       type='button'
       secondary
@@ -29,5 +30,5 @@ export const ProjectButtons = ({
     >
       <NextIcon height='48' width='48' />
     </Styled.Button>
-  </div>
+  </StyledProjectButtons>
 )
