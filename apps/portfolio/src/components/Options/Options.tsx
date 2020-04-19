@@ -1,10 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { Styled } from '../Button'
-
-import './Options.scss'
-import { Link } from '../Link'
+import { Button } from '../Button'
+import { Styled } from './Options.styles'
 
 export interface OptionsProps {
   isEnglish?: boolean
@@ -17,33 +15,27 @@ export const Options = ({
   updateLang,
   activeRoute = '/',
 }: OptionsProps) => (
-  <div className='options'>
-    <Link
+  <Styled.Options>
+    <Styled.HomeLink
       color='secondary'
-      as={NavLink}
-      exact
-      to={activeRoute}
-      className='home-link'
-      activeClassName='active-home'
-    >
-      Jimmy Guzman
-    </Link>
-
-    <div className='options__lang'>
-      <Styled.Button
-        primary
-        active={!isEnglish}
-        onClick={() => updateLang('spanish')}
-      >
+      as={({ ...props }) => (
+        <NavLink
+          exact
+          activeClassName='active-home'
+          to={activeRoute}
+          {...props}
+        >
+          Jimmy Guzman
+        </NavLink>
+      )}
+    />
+    <div>
+      <Button primary active={!isEnglish} onClick={() => updateLang('spanish')}>
         SP
-      </Styled.Button>
-      <Styled.Button
-        primary
-        active={isEnglish}
-        onClick={() => updateLang('english')}
-      >
+      </Button>
+      <Button primary active={isEnglish} onClick={() => updateLang('english')}>
         ENG
-      </Styled.Button>
+      </Button>
     </div>
-  </div>
+  </Styled.Options>
 )
