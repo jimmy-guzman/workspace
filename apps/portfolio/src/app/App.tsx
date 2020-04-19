@@ -7,6 +7,7 @@ import { Home, Contact, About, Projects } from '@portfolio/pages'
 import { Nav, Options } from '@portfolio/components'
 import { projects as projectsLang } from '@portfolio/lang/projects.json'
 import { ThemeProvider } from '@portfolio/providers'
+import { GlobalStyle } from '@portfolio/styles'
 
 export const App = () => {
   const [isEnglish, updateLang] = useLanguage()
@@ -14,6 +15,7 @@ export const App = () => {
 
   return (
     <ThemeProvider>
+      <GlobalStyle />
       <div className='wrapper' style={{ height: `${appHeight}px` }}>
         <Options updateLang={updateLang} isEnglish={isEnglish} />
         <Switch>
