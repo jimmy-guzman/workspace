@@ -6,6 +6,7 @@ import WebFont from 'webfontloader'
 import { Normalize } from 'styled-normalize'
 
 import { App } from './App'
+import { StyleSheetManager } from 'styled-components'
 
 WebFont.load({
   google: {
@@ -14,9 +15,13 @@ WebFont.load({
 })
 
 render(
-  <Router>
-    <Normalize />
-    <App />
-  </Router>,
+  <StyleSheetManager
+    disableVendorPrefixes={process.env.NODE_ENV === 'development'}
+  >
+    <Router>
+      <Normalize />
+      <App />
+    </Router>
+  </StyleSheetManager>,
   document.getElementById('root')
 )
