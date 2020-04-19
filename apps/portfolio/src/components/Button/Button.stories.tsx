@@ -1,15 +1,14 @@
 import React from 'react'
-import { Styled } from './Button.styles'
+
 import { withThemeProvider } from '@portfolio/utils'
+import { Button } from './Button'
 
 export default {
   title: 'portfolio/components/Button',
-  component: Styled.Button,
+  component: Button,
   decorators: [withThemeProvider],
 }
 
-export const basic = () => <Styled.Button>Basic</Styled.Button>
-export const primary = () => <Styled.Button primary>Primary</Styled.Button>
-export const secondary = () => (
-  <Styled.Button secondary>Secondary</Styled.Button>
-)
+export const basic = () => <Button>Basic</Button>
+export const primary = () => <Button primary>Primary</Button>
+export const secondary = () => <Button secondary>Secondary</Button>
