@@ -13,7 +13,7 @@ export const Projects = ({ isEnglish, projects }: ProjectsProps) => {
 
   return (
     <main className='light'>
-      <section className='projects grid__row'>
+      <section className='grid__row'>
         <Project project={projects[active]} isEnglish={isEnglish} />
         <ProjectButtons
           renderNext={() => setActive(TO_SLIDE.NEXT)}

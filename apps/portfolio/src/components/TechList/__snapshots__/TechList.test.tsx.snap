@@ -16,16 +16,8 @@ exports[`<TechList /> should render default snapshot 1`] = `
   color: #292b2f;
   text-align: center;
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: wrap;
-  -ms-flex-flow: wrap;
   flex-flow: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -82,16 +74,8 @@ exports[`<TechList /> should render snapshot with not isEnglish 1`] = `
   color: #292b2f;
   text-align: center;
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: wrap;
-  -ms-flex-flow: wrap;
   flex-flow: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
