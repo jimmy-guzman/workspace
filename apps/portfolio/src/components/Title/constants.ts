@@ -1,13 +1,4 @@
-export const FONT_WEIGHTS = {
-  REGULAR: 400,
-  BOLD: 700,
-}
-
-export const LETTER_SPACING = {
-  LESS: '1px',
-  DEFAULT: '2px',
-  MORE: '3px',
-}
+export const titleMargin = 0
 
 export const titleFontSizes = {
   default: {
@@ -19,5 +10,3 @@ export const titleFontSizes = {
     subHeader: '72px',
   },
 }
-
-export const TITLE_MARGIN = 0
