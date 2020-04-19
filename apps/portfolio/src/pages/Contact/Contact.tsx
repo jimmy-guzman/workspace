@@ -4,8 +4,7 @@ import contact from '@portfolio/lang/contact.json'
 import { GithubIcon, LinkedinIcon, EmailIcon } from '@portfolio/SVGs'
 import { Styled as StyledList } from '@portfolio/components/List'
 import { Link, Card } from '@portfolio/components'
-
-import './Contact.scss'
+import { StyledContact } from './Contact.styles'
 
 export interface ContactProps {
   isEnglish?: boolean
@@ -13,7 +12,7 @@ export interface ContactProps {
 
 export const Contact = ({ isEnglish = true }: ContactProps) => (
   <main className='light'>
-    <section className='contact grid__row'>
+    <StyledContact className='grid__row'>
       <Card className='grid__col--6'>
         <p>{isEnglish ? contact.english : contact.spanish}</p>
         <StyledList.List centered style={{ justifyContent: 'space-around' }}>
@@ -49,6 +48,6 @@ export const Contact = ({ isEnglish = true }: ContactProps) => (
           </Link>
         </p>
       </Card>
-    </section>
+    </StyledContact>
   </main>
 )
