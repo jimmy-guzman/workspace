@@ -12,7 +12,7 @@ export const Projects = ({ isEnglish, projects }: ProjectsProps) => {
   const [active, setActive] = useSlides(projects.length)
 
   return (
-    <main className='light'>
+    <main>
       <section className='grid__row'>
         <Project project={projects[active]} isEnglish={isEnglish} />
         <ProjectButtons

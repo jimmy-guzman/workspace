@@ -1,11 +1,14 @@
 import { createGlobalStyle, css } from 'styled-components'
 
 import { fontFamily, fontSize, letterSpacing } from './typography'
-import { em } from '@portfolio/utils'
+import { em, flex, mq } from '@portfolio/utils'
 
 export const bodyStyles = css`
   font-family: ${fontFamily};
-  font-size: ${fontSize};
+  font-size: 14px;
+  @media (min-width: ${mq('small')}) {
+    font-size: ${fontSize};
+  }
   color: ${({ theme }) => theme.font.color};
   background: ${({ theme }) => theme.background.app};
   h1,
@@ -26,25 +29,17 @@ export const GlobalStyle = createGlobalStyle`
   *:after {
     box-sizing: inherit;
   }
-  ::-webkit-scrollbar {
-    width: ${em('12px')};
-  }
-  ::-webkit-scrollbar-track {
-    background: inherit;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.background.app};
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: ${({ theme }) => theme.colors.secondary};
-  }
   body {
     ${bodyStyles}
   }
   main {
+    height: 100%;
+    width: 100%;
+    ${flex('flex', 'column', 'center', 'center')}
     background: ${({ theme }) => theme.background.section};
   }
   .wrapper {
-  height: 100%;
+    height: 100%;
+    ${flex('flex', 'column', 'space-between', 'center')}
 }
 `

@@ -22,7 +22,7 @@ export const setButtonFill = setButtonColor
 
 export const setBackground = ({ primary, secondary, theme }: ButtonProps) => {
   if (primary) {
-    return theme.background.app
+    return 'inherit'
   }
 
   if (secondary) {
