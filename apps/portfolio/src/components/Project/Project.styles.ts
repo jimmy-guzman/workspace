@@ -33,7 +33,7 @@ export const StyledProjectLink = styled(Link)`
 `
 
 export const StyledProjectInfo = styled.div`
-  background: ${({ theme }) => theme.colors.tertiary};
+  background: inherit;
   padding: ${em('16px')};
 `
 export const StyledProjectDesc = styled.div`
@@ -41,12 +41,12 @@ export const StyledProjectDesc = styled.div`
 `
 
 export const StyledProjectBar = styled.div`
-  background: ${({ theme }) => theme.colors.tertiary};
+  background: inherit;
   letter-spacing: ${letterSpacing.more};
   ${flex('flex', 'row', 'space-between', 'center')}
 `
 export const StyledProjectName = styled.span`
   padding: ${em('8px')};
-  color: ${({ theme }) => theme.colors.tertiary};
+  color: ${({ theme }) => theme.background.app};
   background: ${({ theme }) => theme.colors.primary};
 `

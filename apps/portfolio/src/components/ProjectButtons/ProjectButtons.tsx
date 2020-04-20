@@ -16,18 +16,13 @@ export const ProjectButtons = ({
   <StyledProjectButtons>
     <Styled.Button
       type='button'
-      secondary
+      primary
       onClick={renderPrev}
       aria-label='Previous'
     >
       <PrevIcon height='48' width='48' />
     </Styled.Button>
-    <Styled.Button
-      type='button'
-      secondary
-      onClick={renderNext}
-      aria-label='Next'
-    >
+    <Styled.Button type='button' primary onClick={renderNext} aria-label='Next'>
       <NextIcon height='48' width='48' />
     </Styled.Button>
   </StyledProjectButtons>

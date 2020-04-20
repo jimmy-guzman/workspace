@@ -1,27 +1,53 @@
-interface THEME {
+interface Theme {
+  background: {
+    app: string
+    section: string
+    card: string
+  }
   colors: {
-    /** #40af93 */
     primary: string
-    /** #d7d5d9 */
     secondary: string
-    /** #292b2f */
     tertiary: string
-    /** #018185 */
-    quaternary: string
+    highlight: string
   }
   font: {
+    color: string
     family: string
   }
 }
 
-export const theme: THEME = {
+export const dark: Theme = {
+  background: {
+    app: '#263238',
+    section: '#263238',
+    card: '#263238',
+  },
   colors: {
-    primary: '#40af93',
-    secondary: '#d7d5d9',
-    tertiary: '#292b2f',
-    quaternary: '#018185',
+    primary: '#80CBC4',
+    secondary: '#546E7A',
+    tertiary: '#80CBC420',
+    highlight: '#FFCC00',
   },
   font: {
+    color: '#EEFFFF',
+    family: "'Oswald', Impact, 'Franklin Gothic Bold', sans-serif",
+  },
+}
+
+export const ligth: Theme = {
+  background: {
+    app: '#FAFAFA',
+    section: '#FAFAFA',
+    card: '#FAFAFA',
+  },
+  colors: {
+    primary: '#80CBC4',
+    secondary: '#90A4AE',
+    tertiary: '#272727',
+    highlight: '#FFCC00',
+  },
+  font: {
+    color: '#90A4AE',
     family: "'Oswald', Impact, 'Franklin Gothic Bold', sans-serif",
   },
 }

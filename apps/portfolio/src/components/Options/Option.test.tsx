@@ -2,6 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '@portfolio/test-utils'
 
 import { Options, OptionsProps } from './Options'
+import { dark } from '@portfolio/providers'
 
 const mockUpdateLang = jest.fn()
 
@@ -26,13 +27,13 @@ describe('<Options />', () => {
       isEnglish: false,
     })
 
-    expect(getByText('ENG')).toHaveStyle('color: rgb(215, 213, 217)')
+    expect(getByText('ENG')).toHaveStyle(`color: ${dark.colors.secondary}`)
   })
   it('should set correct class when english', () => {
     const { getByText } = setupOptions({
       isEnglish: true,
     })
 
-    expect(getByText('ENG')).toHaveStyle('color: rgb(64, 175, 147)')
+    expect(getByText('ENG')).toHaveStyle(`color: ${dark.colors.highlight}`)
   })
 })

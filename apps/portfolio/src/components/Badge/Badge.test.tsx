@@ -15,9 +15,9 @@ describe('<Styled.Badge />', () => {
       .c0 {
         font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
         display: inline-block;
-        background: #d7d5d9;
+        background: #80CBC4;
         border-radius: 0.17em;
-        color: #292b2f;
+        color: #263238;
         padding: 0.28em;
       }
 

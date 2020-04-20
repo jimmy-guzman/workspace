@@ -5,14 +5,14 @@ export const setButtonColor = (
   hover: boolean = false
 ): string | undefined => {
   if (hover || active) {
-    return theme.colors.primary
+    return theme.colors.highlight
   }
   if (primary) {
-    return theme.colors.secondary
+    return theme.colors.primary
   }
 
   if (secondary) {
-    return theme.colors.tertiary
+    return theme.colors.secondary
   }
 
   return undefined
@@ -22,7 +22,7 @@ export const setButtonFill = setButtonColor
 
 export const setBackground = ({ primary, secondary, theme }: ButtonProps) => {
   if (primary) {
-    return theme.colors.tertiary
+    return theme.background.app
   }
 
   if (secondary) {

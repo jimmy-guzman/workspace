@@ -2,22 +2,22 @@
 
 exports[`<ProjectButtons /> should render default snapshot 1`] = `
 .c1 {
-  background: transparent;
+  background: #263238;
   border: none;
   outline: none;
   font-size: 1.33em;
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  color: #292b2f;
-  fill: #292b2f;
+  color: #80CBC4;
+  fill: #80CBC4;
 }
 
 .c1:hover,
 .c1:active,
 .c1:focus {
-  color: #40af93;
-  fill: #40af93;
+  color: #FFCC00;
+  fill: #FFCC00;
 }
 
 .c0 {
