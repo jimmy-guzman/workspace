@@ -20,6 +20,7 @@ describe('<Styled.List />', () => {
       .c0 {
         list-style: none;
         padding: 0;
+        margin: 0;
         color: inherit;
         font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
         display: block;

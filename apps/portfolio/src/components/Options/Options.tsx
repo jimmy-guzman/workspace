@@ -34,7 +34,7 @@ export const Options = ({
         )}
       />
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <Button
             secondary
             active={theme.name === light.name}
@@ -50,7 +50,7 @@ export const Options = ({
             <NightIcon height='20' width='20' />
           </Button>
         </div>
-        <div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <Button
             secondary
             active={!isEnglish}

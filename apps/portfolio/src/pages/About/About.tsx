@@ -8,7 +8,7 @@ export interface AboutProps {
 }
 
 export const About = ({ isEnglish = true }: AboutProps) => (
-  <main className='light'>
+  <main>
     <section className='about grid__row'>
       <Card className='grid__col--6'>
         <h1>{isEnglish ? 'About Me:' : 'Sobre Mi:'}</h1>

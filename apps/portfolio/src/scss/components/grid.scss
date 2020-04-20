@@ -1,17 +1,3 @@
-.wrapper {
-  @include flex(flex, column, space-between, center);
-}
-
-.dark {
-  background: $color-bg-dark;
-}
-
-.light {
-  height: 100%;
-  width: 100%;
-  @include flex(flex, column, center, center);
-}
-
 .grid {
   @include e(row) {
     height: 100%;
