@@ -43,7 +43,7 @@ export const Contact = ({ isEnglish = true }: ContactProps) => (
           </StyledList.ListItem>
         </StyledList.List>
         <p>
-          <Link color='primary' href='mailto:hello@jimmyguzman.com'>
+          <Link color='secondary' href='mailto:hello@jimmyguzman.com'>
             hello@jimmyguzman.com
           </Link>
         </p>

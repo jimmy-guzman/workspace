@@ -22,7 +22,7 @@ export const defaultLinks: Links[] = [
 export const Nav = ({ isEnglish = true, links = defaultLinks }: NavProps) => (
   <Styled.Nav>
     {links.map(({ link, name, spanish }) => (
-      <Link color='primary' size='big' as={NavLink} to={link} key={link}>
+      <Link color='secondary' size='big' as={NavLink} to={link} key={link}>
         {isEnglish ? name : spanish}
       </Link>
     ))}
