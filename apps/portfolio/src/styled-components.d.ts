@@ -1,6 +1,6 @@
-import { theme } from './providers'
+import { dark } from './providers'
 
-type ThemeInterface = typeof theme
+type ThemeInterface = typeof dark
 
 declare module 'styled-components' {
   interface DefaultTheme extends ThemeInterface {}

@@ -30,10 +30,18 @@ export const Options = ({
       )}
     />
     <div>
-      <Button primary active={!isEnglish} onClick={() => updateLang('spanish')}>
+      <Button
+        secondary
+        active={!isEnglish}
+        onClick={() => updateLang('spanish')}
+      >
         SP
       </Button>
-      <Button primary active={isEnglish} onClick={() => updateLang('english')}>
+      <Button
+        secondary
+        active={isEnglish}
+        onClick={() => updateLang('english')}
+      >
         ENG
       </Button>
     </div>

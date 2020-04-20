@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@portfolio/test-utils'
 import { ButtonProps } from './interfaces'
 import { Styled } from './Button.styles'
-import { theme } from '@portfolio/providers'
+import { dark } from '@portfolio/providers'
 
 const setupButton = (props?: ButtonProps) => {
   return render(<Styled.Button {...props}>button</Styled.Button>)
@@ -15,27 +15,27 @@ describe('<Styled.Button />', () => {
     expect(container.firstChild).toHaveStyle({ background: 'transparent' })
   })
   it('should render Button with primary styles', () => {
-    const { container } = setupButton({ primary: true, theme })
+    const { container } = setupButton({ primary: true, theme: dark })
 
     expect(container.firstChild).toHaveStyle({
-      color: theme.colors.secondary,
-      fill: theme.colors.secondary,
+      color: dark.colors.primary,
+      fill: dark.colors.primary,
     })
   })
   it('should render Button with secondary styles', () => {
-    const { container } = setupButton({ secondary: true, theme })
+    const { container } = setupButton({ secondary: true, theme: dark })
 
     expect(container.firstChild).toHaveStyle({
-      color: theme.colors.tertiary,
-      fill: theme.colors.tertiary,
+      color: dark.colors.secondary,
+      fill: dark.colors.secondary,
     })
   })
   it('should render Button with active', () => {
-    const { container } = setupButton({ active: true, theme })
+    const { container } = setupButton({ active: true, theme: dark })
 
     expect(container.firstChild).toHaveStyle({
-      color: theme.colors.primary,
-      fill: theme.colors.primary,
+      color: dark.colors.highlight,
+      fill: dark.colors.highlight,
     })
   })
 })

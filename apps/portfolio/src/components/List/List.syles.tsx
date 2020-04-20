@@ -10,7 +10,7 @@ const List = styled.ul<ListProps>`
   list-style: none;
   padding: 0;
   /* TODO: revisit color for dark/light theme */
-  color: ${({ theme }) => theme.colors.tertiary};
+  color: inherit;
   text-align: ${({ centered }) => (centered ? 'center' : undefined)};
   font-family: ${({ theme }) => theme.font.family};
   ${({ centered }) =>

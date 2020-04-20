@@ -8,14 +8,14 @@ export const setLinkColor = (
   const asActive = $active || active
 
   if (color === COLORS.primary) {
-    return hover || asActive ? theme.colors.primary : theme.colors.secondary
+    return hover || asActive ? theme.colors.highlight : theme.colors.primary
   }
 
   if (color === COLORS.secondary) {
-    return hover || asActive ? theme.colors.secondary : theme.colors.tertiary
+    return hover || asActive ? theme.colors.highlight : theme.colors.secondary
   }
 
-  return hover || asActive ? theme.colors.primary : undefined
+  return hover || asActive ? theme.colors.tertiary : undefined
 }
 
 export const setLinkFill = setLinkColor

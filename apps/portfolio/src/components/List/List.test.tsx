@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@portfolio/test-utils'
 
 import { Styled, ListProps } from './List.syles'
-import { theme } from '@portfolio/providers'
+import { dark } from '@portfolio/providers'
 
 const setupList = (props?: ListProps) => {
   return render(
@@ -20,7 +20,7 @@ describe('<Styled.List />', () => {
       .c0 {
         list-style: none;
         padding: 0;
-        color: #292b2f;
+        color: inherit;
         font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
         display: block;
       }
@@ -41,7 +41,7 @@ describe('<Styled.List />', () => {
     `)
   })
   it('should render List with centerd styles', () => {
-    const { container } = setupList({ centered: true, theme })
+    const { container } = setupList({ centered: true, theme: dark })
 
     expect(container.firstChild).toHaveStyle({
       'text-align': 'center',
