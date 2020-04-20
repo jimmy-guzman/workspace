@@ -17,7 +17,7 @@ export const Options = ({
   updateLang,
   activeRoute = '/',
 }: OptionsProps) => {
-  const { theme, toggleTheme } = useThemeContext()
+  const { theme, updateTheme: toggleTheme } = useThemeContext()
   return (
     <Styled.Options>
       <Styled.HomeLink
