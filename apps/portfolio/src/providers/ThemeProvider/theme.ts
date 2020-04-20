@@ -1,4 +1,5 @@
-interface Theme {
+export interface Theme {
+  name: 'dark' | 'light'
   background: {
     app: string
     section: string
@@ -17,6 +18,7 @@ interface Theme {
 }
 
 export const dark: Theme = {
+  name: 'dark',
   background: {
     app: '#263238',
     section: '#263238',
@@ -34,7 +36,8 @@ export const dark: Theme = {
   },
 }
 
-export const ligth: Theme = {
+export const light: Theme = {
+  name: 'light',
   background: {
     app: '#FAFAFA',
     section: '#FAFAFA',
