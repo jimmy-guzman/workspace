@@ -11,7 +11,7 @@ export interface ContactProps {
 }
 
 export const Contact = ({ isEnglish = true }: ContactProps) => (
-  <main className='light'>
+  <main>
     <StyledContact className='grid__row'>
       <Card className='grid__col--6'>
         <p>{isEnglish ? contact.english : contact.spanish}</p>

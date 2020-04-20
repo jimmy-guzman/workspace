@@ -2,7 +2,7 @@
 
 exports[`<ProjectButtons /> should render default snapshot 1`] = `
 .c1 {
-  background: #263238;
+  background: inherit;
   border: none;
   outline: none;
   font-size: 1.33em;
