@@ -15,7 +15,7 @@ export const setLinkColor = (
     return hover || asActive ? theme.colors.highlight : theme.colors.secondary
   }
 
-  return hover || asActive ? theme.colors.tertiary : undefined
+  return hover || asActive ? theme.colors.highlight : undefined
 }
 
 export const setLinkFill = setLinkColor
