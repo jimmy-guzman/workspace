@@ -9,7 +9,7 @@ export interface ListProps {
 const List = styled.ul<ListProps>`
   list-style: none;
   padding: 0;
-  /* TODO: revisit color for dark/light theme */
+  margin: 0;
   color: inherit;
   text-align: ${({ centered }) => (centered ? 'center' : undefined)};
   font-family: ${({ theme }) => theme.font.family};
