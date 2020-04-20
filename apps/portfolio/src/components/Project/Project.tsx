@@ -46,7 +46,7 @@ export const Project = ({ project, isEnglish }: ProjectProps) => {
           <StyledProjectName>{project.name}</StyledProjectName>
           <StyledProjectLinks>
             <StyledProjectLink
-              color='primary'
+              color='secondary'
               href={project.url}
               target='_blank'
               rel='noopener noreferrer'
@@ -55,7 +55,7 @@ export const Project = ({ project, isEnglish }: ProjectProps) => {
               <DemoIcon height='24' width='24' />
             </StyledProjectLink>
             <StyledProjectLink
-              color='primary'
+              color='secondary'
               href={`https://github.com/jimmy-guzman/${project.repo}`}
               target='_blank'
               rel='noopener noreferrer'

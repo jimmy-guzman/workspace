@@ -2,7 +2,7 @@
 
 exports[`<Nav /> should render default snapshot 1`] = `
 .c0 {
-  background: #292b2f;
+  background: #263238;
   width: 100%;
   height: 4.11em;
   display: flex;
@@ -14,21 +14,21 @@ exports[`<Nav /> should render default snapshot 1`] = `
 .c1 {
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
   text-decoration: none;
-  color: #d7d5d9;
-  fill: #d7d5d9;
+  color: #546E7A;
+  fill: #546E7A;
   font-size: 1.33em;
 }
 
 .c1:hover {
-  color: #40af93;
-  fill: #40af93;
+  color: #FFCC00;
+  fill: #FFCC00;
   cursor: pointer;
 }
 
 .c1:active,
 .c1.active {
-  color: #40af93;
-  fill: #40af93;
+  color: #FFCC00;
+  fill: #FFCC00;
 }
 
 <nav
@@ -36,21 +36,21 @@ exports[`<Nav /> should render default snapshot 1`] = `
 >
   <a
     class="c1"
-    color="primary"
+    color="secondary"
     href="/about"
   >
     About
   </a>
   <a
     class="c1"
-    color="primary"
+    color="secondary"
     href="/projects"
   >
     Projects
   </a>
   <a
     class="c1"
-    color="primary"
+    color="secondary"
     href="/contact"
   >
     Contact
@@ -60,7 +60,7 @@ exports[`<Nav /> should render default snapshot 1`] = `
 
 exports[`<Nav /> should render snapshot with not isEnglish 1`] = `
 .c0 {
-  background: #292b2f;
+  background: #263238;
   width: 100%;
   height: 4.11em;
   display: flex;
@@ -72,21 +72,21 @@ exports[`<Nav /> should render snapshot with not isEnglish 1`] = `
 .c1 {
   font-family: 'Oswald',Impact,'Franklin Gothic Bold',sans-serif;
   text-decoration: none;
-  color: #d7d5d9;
-  fill: #d7d5d9;
+  color: #546E7A;
+  fill: #546E7A;
   font-size: 1.33em;
 }
 
 .c1:hover {
-  color: #40af93;
-  fill: #40af93;
+  color: #FFCC00;
+  fill: #FFCC00;
   cursor: pointer;
 }
 
 .c1:active,
 .c1.active {
-  color: #40af93;
-  fill: #40af93;
+  color: #FFCC00;
+  fill: #FFCC00;
 }
 
 <nav
@@ -94,21 +94,21 @@ exports[`<Nav /> should render snapshot with not isEnglish 1`] = `
 >
   <a
     class="c1"
-    color="primary"
+    color="secondary"
     href="/about"
   >
     Sobre Mi
   </a>
   <a
     class="c1"
-    color="primary"
+    color="secondary"
     href="/projects"
   >
     Proyectos
   </a>
   <a
     class="c1"
-    color="primary"
+    color="secondary"
     href="/contact"
   >
     Contacto

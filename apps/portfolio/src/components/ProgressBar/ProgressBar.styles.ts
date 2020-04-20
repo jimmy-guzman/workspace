@@ -36,12 +36,12 @@ const Bar = styled.div`
   height: 8px;
   display: block;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.tertiary};
+  background-color: ${({ theme }) => theme.background.app};
   overflow: hidden;
 `
 
 const Progress = styled.div`
-  background-color: ${({ theme }) => theme.colors.quaternary};
+  background-color: ${({ theme }) => theme.colors.primary};
   &:before {
     content: '';
     position: absolute;

@@ -6,8 +6,8 @@ import { em } from '@portfolio/utils'
 export const bodyStyles = css`
   font-family: ${fontFamily};
   font-size: ${fontSize};
-  color: ${({ theme }) => theme.colors.secondary};
-  background: ${({ theme }) => theme.colors.tertiary};
+  color: ${({ theme }) => theme.font.color};
+  background: ${({ theme }) => theme.background.app};
   h1,
   h2 {
     margin: 0;
@@ -33,13 +33,16 @@ export const GlobalStyle = createGlobalStyle`
     background: inherit;
   }
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.tertiary};
+    background: ${({ theme }) => theme.background.app};
   }
   ::-webkit-scrollbar-thumb:hover {
     background: ${({ theme }) => theme.colors.secondary};
   }
   body {
     ${bodyStyles}
+  }
+  main {
+    background: ${({ theme }) => theme.background.section};
   }
   .wrapper {
   height: 100%;

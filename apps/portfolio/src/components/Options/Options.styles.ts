@@ -4,14 +4,14 @@ import { flex, em } from '@portfolio/utils'
 import { Link } from '../Link/Link.styles'
 
 const Options = styled.div`
-  background: ${({ theme }) => theme.colors.tertiary};
+  background: ${({ theme }) => theme.background.app};
   width: 100%;
   ${flex('flex', 'row', 'space-between', 'center')}
 `
 const HomeLink = styled(Link)`
   padding: ${em('8px')};
   background: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.tertiary};
+  color: ${({ theme }) => theme.background.app};
   letter-spacing: ${em('3px')};
   max-width: ${em('500px')};
   &.active-home {
