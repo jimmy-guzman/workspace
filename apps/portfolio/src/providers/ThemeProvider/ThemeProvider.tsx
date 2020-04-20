@@ -1,25 +1,38 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 import { ThemeProvider as Provider } from 'styled-components'
 
 import { light, dark, Theme } from './theme'
 
 interface IThemeContext {
   theme: Theme
-  toggleTheme: (themeName: string) => void
+  updateTheme: (themeName: string) => void
 }
 
 const ThemeContext = createContext<IThemeContext | undefined>(undefined)
+const savedThemeKey = `${window.location.host}-jg-theme`
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(dark)
 
-  const toggleTheme = (themeName: string): void => {
-    if (themeName === dark.name) setTheme(dark)
-    if (themeName === light.name) setTheme(light)
+  const updateTheme = (themeName: string): void => {
+    if (themeName === dark.name) {
+      window.sessionStorage.setItem(savedThemeKey, dark.name)
+      setTheme(dark)
+    }
+    if (themeName === light.name) {
+      window.sessionStorage.setItem(savedThemeKey, light.name)
+      setTheme(light)
+    }
   }
 
+  useEffect(() => {
+    const savedThemeName = window.sessionStorage.getItem(savedThemeKey)
+
+    if (savedThemeName) updateTheme(savedThemeName)
+  }, [theme.name])
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, updateTheme }}>
       <ThemeContext.Consumer>
         {value =>
           value ? <Provider theme={value.theme}>{children}</Provider> : null
