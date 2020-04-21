@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import { Button } from '../Button'
 import { Styled } from './Options.styles'
-import { DayIcon, NightIcon } from '@portfolio/SVGs'
+import { DayIcon, NightIcon } from '@portfolio/svg'
 import { useThemeContext, light, dark } from '@portfolio/providers'
 
 export interface OptionsProps {

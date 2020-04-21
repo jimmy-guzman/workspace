@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PrevIcon, NextIcon } from '@portfolio/SVGs'
+import { PrevIcon, NextIcon } from '@portfolio/svg'
 import { Styled } from '../Button'
 import { StyledProjectButtons } from './ProjectButtons.styles'
 

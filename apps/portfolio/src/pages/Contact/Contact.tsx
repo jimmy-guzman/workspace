@@ -1,7 +1,7 @@
 import React from 'react'
 
 import contact from '@portfolio/lang/contact.json'
-import { GithubIcon, LinkedinIcon, EmailIcon } from '@portfolio/SVGs'
+import { GithubIcon, LinkedinIcon, EmailIcon } from '@portfolio/svg'
 import { Styled as StyledList } from '@portfolio/components/List'
 import { Link, Card } from '@portfolio/components'
 import { StyledContact } from './Contact.styles'
