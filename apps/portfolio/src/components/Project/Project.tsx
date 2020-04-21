@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { DemoIcon, GithubIcon } from '@portfolio/SVGs'
+import { DemoIcon, GithubIcon } from '@portfolio/svg'
 import { ProgressBar } from '../ProgressBar'
 import { TechList } from '../TechList'
 import {
