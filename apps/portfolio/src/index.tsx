@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import WebFont from 'webfontloader'
 import { Normalize } from 'styled-normalize'
 
-import { App } from './App'
+import { App } from './app'
 import { StyleSheetManager } from 'styled-components'
 
 WebFont.load({
