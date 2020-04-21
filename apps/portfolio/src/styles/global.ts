@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components'
 
 import { fontFamily, fontSize, letterSpacing } from './typography'
-import { em, flex, mq } from '@portfolio/utils'
+import { flex, mq } from '@portfolio/utils'
 
 export const bodyStyles = css`
   font-family: ${fontFamily};
