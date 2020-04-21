@@ -1,6 +1,6 @@
 {
   "name": "@jimmy-guzman/portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Jimmy Guzman's portfolio",
   "author": "Jimmy Guzman <jimmy.guzman@outlook.com>",
@@ -31,7 +31,7 @@
     "url": "https://github.com/jimmy-guzman/tachos/issues"
   },
   "dependencies": {
-    "@jimmy-guzman/hooks": "^0.1.0",
+    "@jimmy-guzman/hooks": "^0.2.0",
     "react-router-dom": "5.1.2",
     "react-transition-group": "4.3.0",
     "webfontloader": "1.6.28"
