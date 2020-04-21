@@ -4,8 +4,13 @@ metadata:
   name: portfolio
   annotations:
     kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-dev.jimmy.codes-prod
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  tls:
+    - secretName: letsencrypt-dev.jimmy.codes-prod
+      hosts:
+        - jimmy.codes
   rules:
     - host: jimmy.codes
       http:
