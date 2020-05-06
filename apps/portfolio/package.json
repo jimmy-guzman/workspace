@@ -33,7 +33,7 @@
   "dependencies": {
     "@jimmy-guzman/hooks": "^0.1.0",
     "react-router-dom": "5.1.2",
-    "react-transition-group": "4.3.0",
+    "react-transition-group": "4.4.1",
     "webfontloader": "1.6.28"
   }
 }
